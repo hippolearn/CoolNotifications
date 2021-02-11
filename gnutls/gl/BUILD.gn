@@ -1,0 +1,39 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("gl_config") {
+  include_dirs = [
+    "//third_party/gnutls/gl",
+    "//third_party/gnutls/gl/sys",
+  ]
+}
+
+gl_sources = [
+  "//third_party/gnutls/gl/asnprintf.c",
+  "//third_party/gnutls/gl/bitrotate.c",
+  "//third_party/gnutls/gl/c-ctype.c",
+  "//third_party/gnutls/gl/c-strcasecmp.c",
+  "//third_party/gnutls/gl/c-strncasecmp",
+  "//third_party/gnutls/gl/cloexec.c",
+  "//third_party/gnutls/gl/fcntl.c",
+  "//third_party/gnutls/gl/fd-hook.c",
+  "//third_party/gnutls/gl/glthread/threadlib.c",
+  "//third_party/gnutls/gl/hash-pjw-bare.c",
+  "//third_party/gnutls/gl/hash.c",
+  "//third_party/gnutls/gl/malloca.c",
+  "//third_party/gnutls/gl/print-args.c",
+  "//third_party/gnutls/gl/print-parse.c",
+  "//third_party/gnutls/gl/read-file",
+  "//third_party/gnutls/gl/stat-time",
+  "//third_party/gnutls/gl/sys_socket",
+  "//third_party/gnutls/gl/unistd.c",
+  "//third_party/gnutls/gl/vasnprintf.c",
+  "//third_party/gnutls/gl/xsize.c",
+]
+lite_library("gl") {
+  target_type = "shared_library"
+  sources = gl_sources
+
+  public_configs = [
+    ":gl_config",
+  ]
+}
