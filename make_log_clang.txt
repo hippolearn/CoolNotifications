@@ -1,0 +1,2251 @@
+make  all-recursive
+make[1]: Entering directory '/root/third_party/gnutls/new/gnutls'
+Making all in gl
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/gl'
+  GEN      alloca.h
+  GEN      arpa/inet.h
+  GEN      fcntl.h
+  GEN      inttypes.h
+  GEN      limits.h
+  GEN      netdb.h
+  GEN      stdio.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      strings.h
+  GEN      sys/socket.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/types.h
+  GEN      sys/uio.h
+  GEN      time.h
+  GEN      unistd.h
+  GEN      wchar.h
+make  all-recursive
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/gl'
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/gl'
+  CC       bitrotate.lo
+  CC       c-ctype.lo
+  CC       c-strcasecmp.lo
+  CC       c-strncasecmp.lo
+  CC       cloexec.lo
+  CC       fd-hook.lo
+  CC       hash.lo
+  CC       hash-pjw-bare.lo
+  CC       malloca.lo
+  CC       read-file.lo
+  CC       stat-time.lo
+  CC       sys_socket.lo
+  CC       glthread/threadlib.lo
+  CC       unistd.lo
+  CC       xsize.lo
+  CC       asnprintf.lo
+  CC       fcntl.lo
+  CC       printf-args.lo
+  CC       printf-parse.lo
+  CC       vasnprintf.lo
+  CCLD     libgnu.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/gl'
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/gl'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/gl'
+Making all in lib
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/lib'
+make  all-recursive
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/lib'
+Making all in includes
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/includes'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/includes'
+Making all in x509
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/x509'
+make  all-am
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/x509'
+  CC       common.lo
+  CC       key_encode.lo
+  CC       key_decode.lo
+  CC       time.lo
+  CC       crl.lo
+  CC       crl_write.lo
+  CC       crq.lo
+  CC       dn.lo
+  CC       attributes.lo
+  CC       prov-seed.lo
+  CC       extensions.lo
+  CC       mpi.lo
+  CC       output.lo
+  CC       pkcs12.lo
+  CC       pkcs12_bag.lo
+  CC       pkcs12_encr.lo
+  CC       pkcs7.lo
+  CC       pkcs7-attrs.lo
+  CC       pkcs7-crypt.lo
+  CC       privkey.lo
+  CC       privkey_pkcs8.lo
+  CC       privkey_pkcs8_pbes1.lo
+  CC       privkey_openssl.lo
+  CC       hostname-verify.lo
+  CC       sign.lo
+  CC       verify.lo
+  CC       x509.lo
+  CC       x509_dn.lo
+  CC       x509_write.lo
+  CC       name_constraints.lo
+  CC       verify-high.lo
+  CC       verify-high2.lo
+  CC       x509_ext.lo
+  CC       email-verify.lo
+  CC       pkcs7-output.lo
+  CC       virt-san.lo
+  CC       spki.lo
+  CC       tls_features.lo
+  CC       krb5.lo
+  CC       ip.lo
+  CC       ocsp.lo
+  CC       ocsp_output.lo
+  CCLD     libgnutls_x509.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/x509'
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/x509'
+Making all in auth
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/auth'
+  CC       anon.lo
+  CC       cert.lo
+  CC       dh_common.lo
+  CC       dhe.lo
+  CC       rsa_psk.lo
+  CC       dhe_psk.lo
+  CC       psk.lo
+  CC       psk_passwd.lo
+  CC       rsa.lo
+  CC       srp_kx.lo
+  CC       srp_passwd.lo
+  CC       srp_rsa.lo
+  CC       srp_sb64.lo
+  CC       anon_ecdh.lo
+  CC       ecdhe.lo
+  CC       vko_gost.lo
+  CCLD     libgnutls_auth.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/auth'
+Making all in ext
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/ext'
+  CC       max_record.lo
+  CC       server_name.lo
+  CC       signature.lo
+  CC       safe_renegotiation.lo
+  CC       session_ticket.lo
+  CC       srp.lo
+  CC       heartbeat.lo
+  CC       status_request.lo
+  CC       dumbfw.lo
+  CC       ext_master_secret.lo
+  CC       etm.lo
+  CC       supported_versions.lo
+  CC       post_handshake.lo
+  CC       key_share.lo
+  CC       cookie.lo
+  CC       psk_ke_modes.lo
+  CC       pre_shared_key.lo
+  CC       supported_groups.lo
+  CC       ec_point_formats.lo
+  CC       early_data.lo
+  CC       record_size_limit.lo
+  CC       client_cert_type.lo
+  CC       server_cert_type.lo
+  CC       alpn.lo
+  CC       srtp.lo
+  CCLD     libgnutls_ext.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/ext'
+Making all in algorithms
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/algorithms'
+  CC       cert_types.lo
+  CC       ciphers.lo
+  CC       ciphersuites.lo
+  CC       ecc.lo
+  CC       kx.lo
+  CC       mac.lo
+  CC       protocols.lo
+  CC       publickey.lo
+  CC       secparams.lo
+  CC       sign.lo
+  CC       groups.lo
+  CCLD     libgnutls_alg.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/algorithms'
+Making all in extras
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/extras'
+  CC       randomart.lo
+  CC       hex.lo
+  CCLD     libgnutls_extras.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/extras'
+Making all in accelerated
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/accelerated'
+Making all in x86
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/accelerated/x86'
+  CC       x86-common.lo
+x86-common.c: In function 'register_x86_crypto':
+x86-common.c:314:15: warning: 'a' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  family = ((a >> 8) & 0x0F);
+            ~~~^~~~~
+x86-common.c:308:15: note: 'a' was declared here
+  unsigned int a,b,c,d;
+               ^
+x86-common.c: At top level:
+x86-common.c:64:0: warning: macro "bit_AVX512BITALG" is not used [-Wunused-macros]
+ # define bit_AVX512BITALG 0x4000
+ 
+  CC       sha-x86-ssse3.lo
+  CC       hmac-x86-ssse3.lo
+  CC       aes-gcm-x86-ssse3.lo
+  CC       aes-gcm-x86-aesni.lo
+  CC       aes-cbc-x86-ssse3.lo
+  CC       aes-cbc-x86-aesni.lo
+  CC       aes-ccm-x86-aesni.lo
+  CC       aes-xts-x86-aesni.lo
+  CC       sha-padlock.lo
+  CC       hmac-padlock.lo
+  CC       aes-padlock.lo
+  CC       aes-gcm-padlock.lo
+  CC       aes-gcm-x86-pclmul.lo
+  CC       aes-gcm-x86-pclmul-avx.lo
+  CCAS     elf/aesni-x86_64.lo
+  CCAS     elf/ghash-x86_64.lo
+  CCAS     elf/sha1-ssse3-x86_64.lo
+  CCAS     elf/sha512-ssse3-x86_64.lo
+  CCAS     elf/aes-ssse3-x86_64.lo
+  CCAS     elf/aesni-gcm-x86_64.lo
+  CCAS     elf/sha256-ssse3-x86_64.lo
+  CCAS     elf/e_padlock-x86_64.lo
+  CCLD     libx86.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/accelerated/x86'
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/accelerated'
+  CC       accelerated.lo
+  CC       cryptodev.lo
+  CC       cryptodev-gcm.lo
+  CCLD     libaccelerated.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/accelerated'
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/accelerated'
+Making all in unistring
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/unistring'
+  GEN      limits.h
+  GEN      sys/types.h
+  GEN      unictype.h
+  GEN      uninorm.h
+  GEN      unistr.h
+  GEN      unitypes.h
+make  all-recursive
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/unistring'
+make[6]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/unistring'
+  CC       unictype/categ_C.lo
+  CC       unictype/categ_Cc.lo
+  CC       unictype/categ_Cf.lo
+  CC       unictype/categ_Cn.lo
+  CC       unictype/categ_Co.lo
+  CC       unictype/categ_Cs.lo
+  CC       unictype/categ_L.lo
+  CC       unictype/categ_LC.lo
+  CC       unictype/categ_Ll.lo
+  CC       unictype/categ_Lm.lo
+  CC       unictype/categ_Lo.lo
+  CC       unictype/categ_Lt.lo
+  CC       unictype/categ_Lu.lo
+  CC       unictype/categ_M.lo
+  CC       unictype/categ_Mc.lo
+  CC       unictype/categ_Me.lo
+  CC       unictype/categ_Mn.lo
+  CC       unictype/categ_N.lo
+  CC       unictype/categ_Nd.lo
+  CC       unictype/categ_Nl.lo
+  CC       unictype/categ_No.lo
+  CC       unictype/categ_P.lo
+  CC       unictype/categ_Pc.lo
+  CC       unictype/categ_Pd.lo
+  CC       unictype/categ_Pe.lo
+  CC       unictype/categ_Pf.lo
+  CC       unictype/categ_Pi.lo
+  CC       unictype/categ_Po.lo
+  CC       unictype/categ_Ps.lo
+  CC       unictype/categ_S.lo
+  CC       unictype/categ_Sc.lo
+  CC       unictype/categ_Sk.lo
+  CC       unictype/categ_Sm.lo
+  CC       unictype/categ_So.lo
+  CC       unictype/categ_Z.lo
+  CC       unictype/categ_Zl.lo
+  CC       unictype/categ_Zp.lo
+  CC       unictype/categ_Zs.lo
+  CC       unictype/categ_and.lo
+  CC       unictype/categ_and_not.lo
+  CC       unictype/categ_byname.lo
+  CC       unictype/categ_longname.lo
+  CC       unictype/categ_name.lo
+  CC       unictype/categ_none.lo
+  CC       unictype/categ_of.lo
+  CC       unictype/categ_or.lo
+  CC       unictype/categ_test.lo
+  CC       unictype/combiningclass.lo
+  CC       unictype/pr_default_ignorable_code_point.lo
+  CC       unictype/pr_join_control.lo
+  CC       unictype/pr_not_a_character.lo
+  CC       uninorm/canonical-decomposition.lo
+  CC       uninorm/compat-decomposition.lo
+  CC       uninorm/composition.lo
+  CC       uninorm/decompose-internal.lo
+  CC       uninorm/decomposition.lo
+  CC       uninorm/decomposition-table.lo
+  CC       uninorm/nfc.lo
+  CC       uninorm/nfd.lo
+  CC       uninorm/nfkc.lo
+  CC       uninorm/nfkd.lo
+  CC       uninorm/u16-normalize.lo
+  CC       uninorm/u32-normalize.lo
+  CC       uninorm/u8-normalize.lo
+  CC       unistr/u16-cpy.lo
+  CC       unistr/u16-mbtouc-unsafe.lo
+  CC       unistr/u16-mbtouc-unsafe-aux.lo
+  CC       unistr/u16-mbtoucr.lo
+  CC       unistr/u16-to-u8.lo
+  CC       unistr/u16-uctomb.lo
+  CC       unistr/u16-uctomb-aux.lo
+  CC       unistr/u32-cpy.lo
+  CC       unistr/u32-mbtouc-unsafe.lo
+  CC       unistr/u32-to-u8.lo
+  CC       unistr/u32-uctomb.lo
+  CC       unistr/u8-check.lo
+  CC       unistr/u8-cpy.lo
+  CC       unistr/u8-mbtouc-unsafe.lo
+  CC       unistr/u8-mbtouc-unsafe-aux.lo
+  CC       unistr/u8-mbtoucr.lo
+  CC       unistr/u8-to-u16.lo
+  CC       unistr/u8-to-u32.lo
+  CC       unistr/u8-uctomb.lo
+  CC       unistr/u8-uctomb-aux.lo
+  CCLD     libunistring.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[6]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/unistring'
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/unistring'
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/unistring'
+Making all in nettle
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib/nettle'
+  CC       pk.lo
+  CC       mpi.lo
+  CC       mac.lo
+  CC       cipher.lo
+  CC       init.lo
+  CC       prf.lo
+  CC       rnd.lo
+  CC       int/rsa-keygen-fips186.lo
+  CC       int/provable-prime.lo
+  CC       int/dsa-keygen-fips186.lo
+  CC       int/dsa-validate.lo
+  CC       int/tls1-prf.lo
+  CC       int/dsa-compute-k.lo
+  CC       int/ecdsa-compute-k.lo
+  CC       int/mpn-base256.lo
+  CC       sysrng-linux.lo
+  CC       rnd-fuzzer.lo
+  CC       gost/write-le32.lo
+  CC       gost/gost28147.lo
+  CC       gost/gost-wrap.lo
+  CC       gost/streebog.lo
+  CC       gost/streebog-meta.lo
+  CC       gost/hmac-streebog.lo
+  CC       gost/bignum-le.lo
+  CC       gost/gostdsa-mask.lo
+  CC       gost_keywrap.lo
+  CC       gost/magma.lo
+  CC       gost/kuznyechik.lo
+  CC       gost/acpkm.lo
+  CC       gost/cmac-magma.lo
+  CC       gost/cmac-kuznyechik.lo
+  CCLD     libcrypto.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib/nettle'
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/lib'
+  CC       range.lo
+  CC       record.lo
+  CC       compress.lo
+  CC       debug.lo
+  CC       cipher.lo
+  CC       handshake-tls13.lo
+  CC       mbuffers.lo
+  CC       buffers.lo
+  CC       handshake.lo
+  CC       errors.lo
+  CC       dh.lo
+  CC       kx.lo
+  CC       cipher-cbc.lo
+  CC       priority.lo
+  CC       hash_int.lo
+  CC       cipher_int.lo
+  CC       session.lo
+  CC       db.lo
+  CC       x509_b64.lo
+  CC       hello_ext.lo
+  CC       auth.lo
+  CC       sslv2_compat.lo
+  CC       datum.lo
+  CC       session_pack.lo
+  CC       mpi.lo
+  CC       pk.lo
+  CC       cert-cred.lo
+  CC       global.lo
+  CC       constate.lo
+  CC       anon_cred.lo
+  CC       pkix_asn1_tab.lo
+  CC       gnutls_asn1_tab.lo
+  CC       mem.lo
+  CC       fingerprint.lo
+  CC       tls-sig.lo
+  CC       ecc.lo
+  CC       alert.lo
+  CC       privkey_raw.lo
+  CC       system/certs.lo
+  CC       system/threads.lo
+  CC       system/fastopen.lo
+  CC       system/sockets.lo
+  CC       str-iconv.lo
+  CC       system.lo
+  CC       profiles.lo
+  CC       inih/ini.lo
+  CC       str.lo
+  CC       str-unicode.lo
+  CC       str-idna.lo
+  CC       state.lo
+  CC       cert-cred-x509.lo
+  CC       file.lo
+  CC       supplemental.lo
+  CC       random.lo
+  CC       crypto-api.lo
+  CC       privkey.lo
+  CC       pcert.lo
+  CC       pubkey.lo
+  CC       locks.lo
+  CC       dtls.lo
+  CC       system_override.lo
+  CC       crypto-backend.lo
+  CC       verify-tofu.lo
+  CC       pin.lo
+  CC       tpm.lo
+  CC       fips.lo
+  CC       safe-memfuncs.lo
+  CC       atfork.lo
+  CC       randomart.lo
+  CC       urls.lo
+  CC       prf.lo
+  CC       auto-verify.lo
+  CC       dh-session.lo
+  CC       cert-session.lo
+  CC       handshake-checks.lo
+  CC       dtls-sw.lo
+  CC       dh-primes.lo
+  CC       openpgp_compat.lo
+  CC       crypto-selftests.lo
+  CC       crypto-selftests-pk.lo
+  CC       secrets.lo
+  CC       extv.lo
+  CC       hello_ext_lib.lo
+  CC       ocsp-api.lo
+  CC       stek.lo
+  CC       cert-cred-rawpk.lo
+  CC       iov.lo
+  CC       vko.lo
+  CC       system/keys-dummy.lo
+  CC       tls13/encrypted_extensions.lo
+  CC       tls13/certificate_request.lo
+  CC       tls13/certificate_verify.lo
+  CC       tls13-sig.lo
+  CC       tls13/finished.lo
+  CC       tls13/key_update.lo
+  CC       tls13/hello_retry.lo
+  CC       tls13/session_ticket.lo
+  CC       tls13/certificate.lo
+  CC       tls13/early_data.lo
+  CC       tls13/post_handshake.lo
+  CC       tls13/psk_ext_parser.lo
+  CC       tls13/anti_replay.lo
+  CC       pkcs11.lo
+  CC       pkcs11x.lo
+  CC       pkcs11_privkey.lo
+  CC       pkcs11_write.lo
+  CC       pkcs11_secret.lo
+  CC       pkcs11_int.lo
+  CC       srp.lo
+  CC       psk.lo
+  CCLD     libgnutls.la
+  CXX      libgnutlsxx_la-gnutlsxx.lo
+  CXXLD    libgnutlsxx.la
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib'
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/lib'
+Making all in extra
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/extra'
+Making all in includes
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/extra/includes'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/extra/includes'
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/extra'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/extra'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/extra'
+Making all in libdane
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/libdane'
+Making all in includes
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/libdane/includes'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/libdane/includes'
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/libdane'
+  CC       dane.lo
+  CC       dane-params.lo
+  CC       errors.lo
+  CCLD     libgnutls-dane.la
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/libdane'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/libdane'
+Making all in po
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/po'
+Making all in src/gl
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/src/gl'
+  GEN      alloca.h
+  GEN      arpa/inet.h
+  GEN      fcntl.h
+  GEN      inttypes.h
+  GEN      limits.h
+  GEN      netdb.h
+  GEN      signal.h
+  GEN      stdio.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      strings.h
+  GEN      sys/select.h
+  GEN      sys/socket.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/types.h
+  GEN      sys/uio.h
+  GEN      time.h
+  GEN      unistd.h
+  GEN      wchar.h
+make  all-recursive
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/src/gl'
+Making all in .
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/src/gl'
+  CC       basename-lgpl.lo
+  CC       bitrotate.lo
+  CC       c-ctype.lo
+  CC       c-strcasecmp.lo
+  CC       c-strncasecmp.lo
+  CC       cloexec.lo
+  CC       close-stream.lo
+  CC       exitfail.lo
+  CC       fd-hook.lo
+  CC       getprogname.lo
+  CC       gettime.lo
+  CC       hash.lo
+  CC       hash-pjw-bare.lo
+  CC       gl_linked_list.lo
+  CC       gl_list.lo
+  CC       malloca.lo
+  CC       nstrftime.lo
+  CC       parse-datetime.lo
+  CC       progname.lo
+  CC       read-file.lo
+  CC       sockets.lo
+  CC       stat-time.lo
+  CC       sys_socket.lo
+  CC       glthread/threadlib.lo
+  CC       timespec.lo
+  CC       unistd.lo
+  CC       xmalloc.lo
+  CC       xalloc-die.lo
+  CC       gl_xlist.lo
+  CC       xsize.lo
+  CC       asnprintf.lo
+  CC       fcntl.lo
+  CC       mktime.lo
+  CC       printf-args.lo
+  CC       printf-parse.lo
+  CC       time_rz.lo
+  CC       vasnprintf.lo
+  CCLD     libgnu_gpl.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/src/gl'
+Making all in tests
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/src/gl/tests'
+  GEN      ctype.h
+  GEN      langinfo.h
+  GEN      locale.h
+  GEN      pthread.h
+  GEN      sched.h
+  GEN      sys/ioctl.h
+make  all-recursive
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/src/gl/tests'
+Making all in .
+make[6]: Entering directory '/root/third_party/gnutls/new/gnutls/src/gl/tests'
+make[6]: Nothing to be done for 'all-am'.
+make[6]: Leaving directory '/root/third_party/gnutls/new/gnutls/src/gl/tests'
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/src/gl/tests'
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/src/gl/tests'
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/src/gl'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/src/gl'
+Making all in src
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/src'
+make  all-recursive
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/src'
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/src'
+  CC       srptool-args.lo
+srptool-args.c:429:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+srptool-args.c:536:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+srptool-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-srp.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       psktool-args.lo
+psktool-args.c:337:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+psktool-args.c:495:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+psktool-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-psk.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       ocsptool-args.lo
+ocsptool-args.c:827:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+ocsptool-args.c:1128:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+ocsptool-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-ocsp.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       serv-args.lo
+serv-args.c:1551:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+serv-args.c:2019:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+serv-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-serv.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       cli-args.lo
+cli-args.c:2069:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+cli-args.c:2310:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+cli-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-cli.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       cli-debug-args.lo
+cli-debug-args.c:341:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+cli-debug-args.c:499:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+cli-debug-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-cli-debug.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       certtool-cfg.lo
+  CC       certtool-args.lo
+certtool-args.c:2747:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+certtool-args.c:2926:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+certtool-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-certtool.la
+copying selected object files to avoid basename conflicts...
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       danetool-args.lo
+danetool-args.c:958:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+danetool-args.c:1137:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+danetool-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-danetool.la
+copying selected object files to avoid basename conflicts...
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       p11tool-args.lo
+p11tool-args.c:2209:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+p11tool-args.c:2556:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+p11tool-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-p11tool.la
+copying selected object files to avoid basename conflicts...
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       tpmtool-args.lo
+tpmtool-args.c:734:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+tpmtool-args.c:865:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+tpmtool-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-tpmtool.la
+copying selected object files to avoid basename conflicts...
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       systemkey-args.lo
+systemkey-args.c:402:41: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+ # define OPTPROC_BASE OPTPROC_TRANSLATE | OPTPROC_NXLAT_OPT
+                                         ^
+systemkey-args.c:533:7: note: in expansion of macro 'OPTPROC_BASE'
+     ( OPTPROC_BASE
+       ^~~~~~~~~~~~
+systemkey-args.c:42:0: warning: macro "OPTION_CODE_COMPILE" is not used [-Wunused-macros]
+ #define OPTION_CODE_COMPILE 1
+ 
+  CCLD     libcmd-systemkey.la
+copying selected object files to avoid basename conflicts...
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       psk.o
+  CCLD     psktool
+  CC       cli-debug.o
+  CC       tests.o
+  CC       socket.o
+  CC       common.o
+  CCLD     gnutls-cli-debug
+  CC       certtool.o
+  CC       certtool-common.o
+  CC       certtool-extras.o
+  CCLD     certtool
+  CC       serv.o
+serv.c: In function 'terminate':
+serv.c:1137:2: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+  write(STDERR_FILENO, buf, p - buf);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       udp-serv.o
+  CCLD     gnutls-serv
+  CC       cli.o
+  CC       benchmark-cipher.o
+  CC       benchmark.o
+  CC       benchmark-tls.o
+  CC       ocsptool-common.o
+  CCLD     gnutls-cli
+  CC       srptool.o
+  CCLD     srptool
+  CC       ocsptool.o
+  CCLD     ocsptool
+  CC       danetool.o
+danetool.c: In function 'cert_callback':
+danetool.c:619:3: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+   write(priv->fd, t.data, t.size);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     danetool
+  CC       tpmtool.o
+  CCLD     tpmtool
+  CC       p11tool-p11tool.o
+  CC       p11tool-pkcs11.o
+  CC       p11tool-certtool-common.o
+  CC       p11tool-certtool-extras.o
+  CC       p11tool-common.o
+  CCLD     p11tool
+  CC       systemkey.o
+  CCLD     systemkey
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/src'
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/src'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/src'
+Making all in tests
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/tests'
+Making all in .
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/tests'
+  CC       utils.lo
+utils.c: In function '_fail':
+utils.c:96:2: warning: ignoring return value of 'vasprintf', declared with attribute warn_unused_result [-Wunused-result]
+  vasprintf(&str, format, arg_ptr);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CC       seccomp.lo
+  CC       utils-adv.lo
+  CCLD     libutils.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       pkcs11/pkcs11-mock.lo
+  CCLD     libpkcs11mock1.la
+  CC       pkcs11/pkcs11-mock2.lo
+  CCLD     libpkcs11mock2.la
+  CC       datefudge-check.o
+  CCLD     datefudge-check
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/tests'
+Making all in cert-tests
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/tests/cert-tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/tests/cert-tests'
+Making all in slow
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/tests/slow'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/tests/slow'
+Making all in suite
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/tests/suite'
+  CC       eagain-cli.o
+eagain-cli.c: In function 'try':
+eagain-cli.c:231:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ev_io_init(&remote_w, _process_data, sd, EV_WRITE);
+   ^~~~~~~~~~
+eagain-cli.c:231:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+eagain-cli.c:231:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+eagain-cli.c:231:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  CCLD     eagain-cli
+  CC       mini-record-timing.o
+mini-record-timing.c: In function 'ch_handler':
+mini-record-timing.c:501:4: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(STDERR_FILENO, "Child died with sigsegv\n", sizeof(msg));
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+mini-record-timing.c:520:4: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(STDERR_FILENO, buf, p - buf);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  CCLD     mini-record-timing
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/tests/suite'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/tests'
+Making all in fuzz
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/fuzz'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/fuzz'
+Making all in guile
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/guile'
+Making all in src
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/guile/src'
+  GEN      enum-map.i.c
+  GEN      smob-types.i.c
+  GEN      enums.h
+  GEN      smobs.h
+  GEN      core.x
+  GEN      errors.x
+make  all-am
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/guile/src'
+  CC       guile_gnutls_v_2_la-core.lo
+  CC       guile_gnutls_v_2_la-errors.lo
+  CC       guile_gnutls_v_2_la-utils.lo
+  CCLD     guile-gnutls-v-2.la
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/guile/src'
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/guile/src'
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/guile'
+  GEN      modules/gnutls.scm
+  GUILEC   modules/gnutls.go
+  GUILEC   modules/gnutls/extra.go
+;;; note: source file ../guile/modules/gnutls.scm
+;;;       newer than compiled /usr/lib/x86_64-linux-gnu/guile/2.2/site-ccache/gnutls.go
+
+Some deprecated features have been used.  Set the environment
+variable GUILE_WARN_DEPRECATED to "detailed" and rerun the
+program to get more information.  Set it to "no" to suppress
+this message.
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/guile'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/guile'
+Making all in doc/manpages
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/manpages'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/manpages'
+Making all in doc
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls/doc'
+make  all-recursive
+make[3]: Entering directory '/root/third_party/gnutls/new/gnutls/doc'
+Making all in examples
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/examples'
+  CC       ex-alert.lo
+  CC       ex-pkcs12.lo
+  CC       ex-session-info.lo
+  CC       ex-x509-info.lo
+  CC       ex-verify.lo
+  CC       ex-client-x509-3.1.lo
+  CC       tcp.lo
+  CC       udp.lo
+  CC       ex-pkcs11-list.lo
+  CC       verify.lo
+  CC       ex-verify-ssh.lo
+  CCLD     libexamples.la
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CC       ex-client-resume.o
+  CCLD     ex-client-resume
+  CC       ex-client-dtls.o
+  CCLD     ex-client-dtls
+  CC       ex-cert-select.o
+  CCLD     ex-cert-select
+  CC       ex-client-x509.o
+  CCLD     ex-client-x509
+  CC       ex-serv-dtls.o
+  CCLD     ex-serv-dtls
+  CC       print-ciphersuites.o
+  CCLD     print-ciphersuites
+  CC       ex-serv-x509.o
+  CCLD     ex-serv-x509
+  CXX      ex-cxx.o
+  CXXLD    ex-cxx
+  CC       ex-client-anon.o
+  CCLD     ex-client-anon
+  CC       ex-serv-anon.o
+  CCLD     ex-serv-anon
+  CC       ex-cert-select-pkcs11.o
+  CCLD     ex-cert-select-pkcs11
+  CC       ex-client-psk.o
+  CCLD     ex-client-psk
+  CC       ex-serv-psk.o
+  CCLD     ex-serv-psk
+  CC       ex-client-srp.o
+  CCLD     ex-client-srp
+  CC       ex-serv-srp.o
+  CCLD     ex-serv-srp
+  CC       tlsproxy/buffer.o
+  CC       tlsproxy/crypto-gnutls.o
+  CC       tlsproxy/tlsproxy.o
+  CCLD     tlsproxy/tlsproxy
+  CC       ex-ocsp-client.o
+  CCLD     ex-ocsp-client
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/examples'
+Making all in scripts
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/scripts'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/scripts'
+Making all in credentials
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/credentials'
+Making all in srp
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/credentials/srp'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/credentials/srp'
+Making all in x509
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/credentials/x509'
+make[5]: Nothing to be done for 'all'.
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/credentials/x509'
+make[5]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/credentials'
+make[5]: Nothing to be done for 'all-am'.
+make[5]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/credentials'
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/credentials'
+Making all in latex
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/doc/latex'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc/latex'
+make[4]: Entering directory '/root/third_party/gnutls/new/gnutls/doc'
+echo "" > gnutls-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/gnutls.h.in |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> gnutls-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_alert_get... ok
+Creating documentation for gnutls_alert_get_name... ok
+Creating documentation for gnutls_alert_get_strname... ok
+Creating documentation for gnutls_alert_send... ok
+Creating documentation for gnutls_alert_send_appropriate... ok
+Creating documentation for gnutls_alert_set_read_function... ok
+Creating documentation for gnutls_alpn_get_selected_protocol... ok
+Creating documentation for gnutls_alpn_set_protocols... ok
+Creating documentation for gnutls_anon_allocate_client_credentials... ok
+Creating documentation for gnutls_anon_allocate_server_credentials... ok
+Creating documentation for gnutls_anon_free_client_credentials... ok
+Creating documentation for gnutls_anon_free_server_credentials... ok
+Creating documentation for gnutls_anon_set_params_function... ok
+Creating documentation for gnutls_anon_set_server_dh_params... ok
+Creating documentation for gnutls_anon_set_server_known_dh_params... ok
+Creating documentation for gnutls_anon_set_server_params_function... ok
+Creating documentation for gnutls_anti_replay_deinit... ok
+Creating documentation for gnutls_anti_replay_enable... ok
+Creating documentation for gnutls_anti_replay_init... ok
+Creating documentation for gnutls_anti_replay_set_add_function... ok
+Creating documentation for gnutls_anti_replay_set_ptr... ok
+Creating documentation for gnutls_anti_replay_set_window... ok
+Creating documentation for gnutls_auth_client_get_type... ok
+Creating documentation for gnutls_auth_get_type... ok
+Creating documentation for gnutls_auth_server_get_type... ok
+Creating documentation for gnutls_base64_decode2... ok
+Creating documentation for gnutls_base64_encode2... ok
+Creating documentation for gnutls_buffer_append_data... ok
+Creating documentation for gnutls_bye... ok
+Creating documentation for gnutls_certificate_activation_time_peers... ok
+Creating documentation for gnutls_certificate_allocate_credentials... ok
+Creating documentation for gnutls_certificate_client_get_request_status... ok
+Creating documentation for gnutls_certificate_expiration_time_peers... ok
+Creating documentation for gnutls_certificate_free_ca_names... ok
+Creating documentation for gnutls_certificate_free_cas... ok
+Creating documentation for gnutls_certificate_free_credentials... ok
+Creating documentation for gnutls_certificate_free_crls... ok
+Creating documentation for gnutls_certificate_free_keys... ok
+Creating documentation for gnutls_certificate_get_crt_raw... ok
+Creating documentation for gnutls_certificate_get_issuer... ok
+Creating documentation for gnutls_certificate_get_ocsp_expiration... ok
+Creating documentation for gnutls_certificate_get_ours... ok
+Creating documentation for gnutls_certificate_get_peers... ok
+Creating documentation for gnutls_certificate_get_peers_subkey_id... ok
+Creating documentation for gnutls_certificate_get_verify_flags... ok
+Creating documentation for gnutls_certificate_get_x509_crt... ok
+Creating documentation for gnutls_certificate_get_x509_key... ok
+Creating documentation for gnutls_certificate_send_x509_rdn_sequence... ok
+Creating documentation for gnutls_certificate_server_set_request... ok
+Creating documentation for gnutls_certificate_set_dh_params... ok
+Creating documentation for gnutls_certificate_set_flags... ok
+Creating documentation for gnutls_certificate_set_known_dh_params... ok
+Creating documentation for gnutls_certificate_set_ocsp_status_request_file... ok
+Creating documentation for gnutls_certificate_set_ocsp_status_request_file2... ok
+Creating documentation for gnutls_certificate_set_ocsp_status_request_function... ok
+Creating documentation for gnutls_certificate_set_ocsp_status_request_function2... ok
+Creating documentation for gnutls_certificate_set_ocsp_status_request_mem... ok
+Creating documentation for gnutls_certificate_set_params_function... ok
+Creating documentation for gnutls_certificate_set_pin_function... ok
+Creating documentation for gnutls_certificate_set_rawpk_key_file... ok
+Creating documentation for gnutls_certificate_set_rawpk_key_mem... ok
+Creating documentation for gnutls_certificate_set_retrieve_function... ok
+Creating documentation for gnutls_certificate_set_verify_flags... ok
+Creating documentation for gnutls_certificate_set_verify_function... ok
+Creating documentation for gnutls_certificate_set_verify_limits... ok
+Creating documentation for gnutls_certificate_set_x509_crl... ok
+Creating documentation for gnutls_certificate_set_x509_crl_file... ok
+Creating documentation for gnutls_certificate_set_x509_crl_mem... ok
+Creating documentation for gnutls_certificate_set_x509_key... ok
+Creating documentation for gnutls_certificate_set_x509_key_file... ok
+Creating documentation for gnutls_certificate_set_x509_key_file2... ok
+Creating documentation for gnutls_certificate_set_x509_key_mem... ok
+Creating documentation for gnutls_certificate_set_x509_key_mem2... ok
+Creating documentation for gnutls_certificate_set_x509_simple_pkcs12_file... ok
+Creating documentation for gnutls_certificate_set_x509_simple_pkcs12_mem... ok
+Creating documentation for gnutls_certificate_set_x509_system_trust... ok
+Creating documentation for gnutls_certificate_set_x509_trust... ok
+Creating documentation for gnutls_certificate_set_x509_trust_dir... ok
+Creating documentation for gnutls_certificate_set_x509_trust_file... ok
+Creating documentation for gnutls_certificate_set_x509_trust_mem... ok
+Creating documentation for gnutls_certificate_type_get... ok
+Creating documentation for gnutls_certificate_type_get2... ok
+Creating documentation for gnutls_certificate_type_get_id... ok
+Creating documentation for gnutls_certificate_type_get_name... ok
+Creating documentation for gnutls_certificate_type_list... ok
+Creating documentation for gnutls_certificate_verification_status_print... ok
+Creating documentation for gnutls_certificate_verify_peers... ok
+Creating documentation for gnutls_certificate_verify_peers2... ok
+Creating documentation for gnutls_certificate_verify_peers3... ok
+Creating documentation for gnutls_check_version... ok
+Creating documentation for gnutls_cipher_get... ok
+Creating documentation for gnutls_cipher_get_id... ok
+Creating documentation for gnutls_cipher_get_key_size... ok
+Creating documentation for gnutls_cipher_get_name... ok
+Creating documentation for gnutls_cipher_list... ok
+Creating documentation for gnutls_cipher_suite_get_name... ok
+Creating documentation for gnutls_cipher_suite_info... ok
+Creating documentation for gnutls_credentials_clear... ok
+Creating documentation for gnutls_credentials_get... ok
+Creating documentation for gnutls_credentials_set... ok
+Creating documentation for gnutls_db_check_entry... ok
+Creating documentation for gnutls_db_check_entry_expire_time... ok
+Creating documentation for gnutls_db_check_entry_time... ok
+Creating documentation for gnutls_db_get_default_cache_expiration... ok
+Creating documentation for gnutls_db_get_ptr... ok
+Creating documentation for gnutls_db_remove_session... ok
+Creating documentation for gnutls_db_set_cache_expiration... ok
+Creating documentation for gnutls_db_set_ptr... ok
+Creating documentation for gnutls_db_set_remove_function... ok
+Creating documentation for gnutls_db_set_retrieve_function... ok
+Creating documentation for gnutls_db_set_store_function... ok
+Creating documentation for gnutls_deinit... ok
+Creating documentation for gnutls_dh_get_group... ok
+Creating documentation for gnutls_dh_get_peers_public_bits... ok
+Creating documentation for gnutls_dh_get_prime_bits... ok
+Creating documentation for gnutls_dh_get_pubkey... ok
+Creating documentation for gnutls_dh_get_secret_bits... ok
+Creating documentation for gnutls_dh_params_cpy... ok
+Creating documentation for gnutls_dh_params_deinit... ok
+Creating documentation for gnutls_dh_params_export2_pkcs3... ok
+Creating documentation for gnutls_dh_params_export_pkcs3... ok
+Creating documentation for gnutls_dh_params_export_raw... ok
+Creating documentation for gnutls_dh_params_generate2... ok
+Creating documentation for gnutls_dh_params_import_dsa... ok
+Creating documentation for gnutls_dh_params_import_pkcs3... ok
+Creating documentation for gnutls_dh_params_import_raw... ok
+Creating documentation for gnutls_dh_params_import_raw2... ok
+Creating documentation for gnutls_dh_params_import_raw3... ok
+Creating documentation for gnutls_dh_params_init... ok
+Creating documentation for gnutls_dh_set_prime_bits... ok
+Creating documentation for gnutls_digest_get_id... ok
+Creating documentation for gnutls_digest_get_name... ok
+Creating documentation for gnutls_digest_get_oid... ok
+Creating documentation for gnutls_digest_list... ok
+Creating documentation for gnutls_ecc_curve_get... ok
+Creating documentation for gnutls_ecc_curve_get_id... ok
+Creating documentation for gnutls_ecc_curve_get_name... ok
+Creating documentation for gnutls_ecc_curve_get_oid... ok
+Creating documentation for gnutls_ecc_curve_get_pk... ok
+Creating documentation for gnutls_ecc_curve_get_size... ok
+Creating documentation for gnutls_ecc_curve_list... ok
+Creating documentation for gnutls_error_is_fatal... ok
+Creating documentation for gnutls_error_to_alert... ok
+Creating documentation for gnutls_est_record_overhead_size... ok
+Creating documentation for gnutls_ext_get_current_msg... ok
+Creating documentation for gnutls_ext_get_data... ok
+Creating documentation for gnutls_ext_get_name... ok
+Creating documentation for gnutls_ext_get_name2... ok
+Creating documentation for gnutls_ext_raw_parse... ok
+Creating documentation for gnutls_ext_register... ok
+Creating documentation for gnutls_ext_set_data... ok
+Creating documentation for gnutls_fingerprint... ok
+Creating documentation for gnutls_fips140_mode_enabled... ok
+Creating documentation for gnutls_fips140_set_mode... ok
+Creating documentation for gnutls_get_system_config_file... ok
+Creating documentation for gnutls_global_deinit... ok
+Creating documentation for gnutls_global_init... ok
+Creating documentation for gnutls_global_set_audit_log_function... ok
+Creating documentation for gnutls_global_set_log_function... ok
+Creating documentation for gnutls_global_set_log_level... ok
+Creating documentation for gnutls_global_set_mutex... ok
+Creating documentation for gnutls_global_set_time_function... ok
+Creating documentation for gnutls_gost_paramset_get_name... ok
+Creating documentation for gnutls_gost_paramset_get_oid... ok
+Creating documentation for gnutls_group_get... ok
+Creating documentation for gnutls_group_get_id... ok
+Creating documentation for gnutls_group_get_name... ok
+Creating documentation for gnutls_group_list... ok
+Creating documentation for gnutls_handshake... ok
+Creating documentation for gnutls_handshake_description_get_name... ok
+Creating documentation for gnutls_handshake_get_last_in... ok
+Creating documentation for gnutls_handshake_get_last_out... ok
+Creating documentation for gnutls_handshake_set_hook_function... ok
+Creating documentation for gnutls_handshake_set_max_packet_length... ok
+Creating documentation for gnutls_handshake_set_post_client_hello_function... ok
+Creating documentation for gnutls_handshake_set_private_extensions... ok
+Creating documentation for gnutls_handshake_set_random... ok
+Creating documentation for gnutls_handshake_set_read_function... ok
+Creating documentation for gnutls_handshake_set_secret_function... ok
+Creating documentation for gnutls_handshake_set_timeout... ok
+Creating documentation for gnutls_handshake_write... ok
+Creating documentation for gnutls_heartbeat_allowed... ok
+Creating documentation for gnutls_heartbeat_enable... ok
+Creating documentation for gnutls_heartbeat_get_timeout... ok
+Creating documentation for gnutls_heartbeat_ping... ok
+Creating documentation for gnutls_heartbeat_pong... ok
+Creating documentation for gnutls_heartbeat_set_timeouts... ok
+Creating documentation for gnutls_hex2bin... ok
+Creating documentation for gnutls_hex_decode... ok
+Creating documentation for gnutls_hex_decode2... ok
+Creating documentation for gnutls_hex_encode... ok
+Creating documentation for gnutls_hex_encode2... ok
+Creating documentation for gnutls_idna_map... ok
+Creating documentation for gnutls_idna_reverse_map... ok
+Creating documentation for gnutls_init... ok
+Creating documentation for gnutls_key_generate... ok
+Creating documentation for gnutls_kx_get... ok
+Creating documentation for gnutls_kx_get_id... ok
+Creating documentation for gnutls_kx_get_name... ok
+Creating documentation for gnutls_kx_list... ok
+Creating documentation for gnutls_load_file... ok
+Creating documentation for gnutls_mac_get... ok
+Creating documentation for gnutls_mac_get_id... ok
+Creating documentation for gnutls_mac_get_key_size... ok
+Creating documentation for gnutls_mac_get_name... ok
+Creating documentation for gnutls_mac_list... ok
+Creating documentation for gnutls_memcmp... ok
+Creating documentation for gnutls_memset... ok
+Creating documentation for gnutls_ocsp_status_request_enable_client... ok
+Creating documentation for gnutls_ocsp_status_request_get... ok
+Creating documentation for gnutls_ocsp_status_request_get2... ok
+Creating documentation for gnutls_ocsp_status_request_is_checked... ok
+Creating documentation for gnutls_oid_to_digest... ok
+Creating documentation for gnutls_oid_to_ecc_curve... ok
+Creating documentation for gnutls_oid_to_gost_paramset... ok
+Creating documentation for gnutls_oid_to_mac... ok
+Creating documentation for gnutls_oid_to_pk... ok
+Creating documentation for gnutls_oid_to_sign... ok
+Creating documentation for gnutls_openpgp_send_cert... ok
+Creating documentation for gnutls_packet_deinit... ok
+Creating documentation for gnutls_packet_get... ok
+Creating documentation for gnutls_pem_base64_decode... ok
+Creating documentation for gnutls_pem_base64_decode2... ok
+Creating documentation for gnutls_pem_base64_encode... ok
+Creating documentation for gnutls_pem_base64_encode2... ok
+Creating documentation for gnutls_perror... ok
+Creating documentation for gnutls_pk_algorithm_get_name... ok
+Creating documentation for gnutls_pk_bits_to_sec_param... ok
+Creating documentation for gnutls_pk_get_id... ok
+Creating documentation for gnutls_pk_get_name... ok
+Creating documentation for gnutls_pk_get_oid... ok
+Creating documentation for gnutls_pk_list... ok
+Creating documentation for gnutls_pk_to_sign... ok
+Creating documentation for gnutls_prf... ok
+Creating documentation for gnutls_prf_early... ok
+Creating documentation for gnutls_prf_hash_get... ok
+Creating documentation for gnutls_prf_raw... ok
+Creating documentation for gnutls_prf_rfc5705... ok
+Creating documentation for gnutls_priority_certificate_type_list... ok
+Creating documentation for gnutls_priority_certificate_type_list2... ok
+Creating documentation for gnutls_priority_cipher_list... ok
+Creating documentation for gnutls_priority_deinit... ok
+Creating documentation for gnutls_priority_ecc_curve_list... ok
+Creating documentation for gnutls_priority_get_cipher_suite_index... ok
+Creating documentation for gnutls_priority_group_list... ok
+Creating documentation for gnutls_priority_init... ok
+Creating documentation for gnutls_priority_init2... ok
+Creating documentation for gnutls_priority_kx_list... ok
+Creating documentation for gnutls_priority_mac_list... ok
+Creating documentation for gnutls_priority_protocol_list... ok
+Creating documentation for gnutls_priority_set... ok
+Creating documentation for gnutls_priority_set_direct... ok
+Creating documentation for gnutls_priority_sign_list... ok
+Creating documentation for gnutls_priority_string_list... ok
+Creating documentation for gnutls_protocol_get_id... ok
+Creating documentation for gnutls_protocol_get_name... ok
+Creating documentation for gnutls_protocol_get_version... ok
+Creating documentation for gnutls_protocol_list... ok
+Creating documentation for gnutls_psk_allocate_client_credentials... ok
+Creating documentation for gnutls_psk_allocate_server_credentials... ok
+Creating documentation for gnutls_psk_client_get_hint... ok
+Creating documentation for gnutls_psk_free_client_credentials... ok
+Creating documentation for gnutls_psk_free_server_credentials... ok
+Creating documentation for gnutls_psk_server_get_username... ok
+Creating documentation for gnutls_psk_server_get_username2... ok
+Creating documentation for gnutls_psk_set_client_credentials... ok
+Creating documentation for gnutls_psk_set_client_credentials2... ok
+Creating documentation for gnutls_psk_set_client_credentials_function... ok
+Creating documentation for gnutls_psk_set_client_credentials_function2... ok
+Creating documentation for gnutls_psk_set_params_function... ok
+Creating documentation for gnutls_psk_set_server_credentials_file... ok
+Creating documentation for gnutls_psk_set_server_credentials_function... ok
+Creating documentation for gnutls_psk_set_server_credentials_function2... ok
+Creating documentation for gnutls_psk_set_server_credentials_hint... ok
+Creating documentation for gnutls_psk_set_server_dh_params... ok
+Creating documentation for gnutls_psk_set_server_known_dh_params... ok
+Creating documentation for gnutls_psk_set_server_params_function... ok
+Creating documentation for gnutls_random_art... ok
+Creating documentation for gnutls_range_split... ok
+Creating documentation for gnutls_reauth... ok
+Creating documentation for gnutls_record_can_use_length_hiding... ok
+Creating documentation for gnutls_record_check_corked... ok
+Creating documentation for gnutls_record_check_pending... ok
+Creating documentation for gnutls_record_cork... ok
+Creating documentation for gnutls_record_disable_padding... ok
+Creating documentation for gnutls_record_discard_queued... ok
+Creating documentation for gnutls_record_get_direction... ok
+Creating documentation for gnutls_record_get_max_early_data_size... ok
+Creating documentation for gnutls_record_get_max_size... ok
+Creating documentation for gnutls_record_get_state... ok
+Creating documentation for gnutls_record_overhead_size... ok
+Creating documentation for gnutls_record_recv... ok
+Creating documentation for gnutls_record_recv_early_data... ok
+Creating documentation for gnutls_record_recv_packet... ok
+Creating documentation for gnutls_record_recv_seq... ok
+Creating documentation for gnutls_record_send... ok
+Creating documentation for gnutls_record_send2... ok
+Creating documentation for gnutls_record_send_early_data... ok
+Creating documentation for gnutls_record_send_range... ok
+Creating documentation for gnutls_record_set_max_early_data_size... ok
+Creating documentation for gnutls_record_set_max_recv_size... ok
+Creating documentation for gnutls_record_set_max_size... ok
+Creating documentation for gnutls_record_set_state... ok
+Creating documentation for gnutls_record_set_timeout... ok
+Creating documentation for gnutls_record_uncork... ok
+Creating documentation for gnutls_rehandshake... ok
+Creating documentation for gnutls_safe_renegotiation_status... ok
+Creating documentation for gnutls_sec_param_get_name... ok
+Creating documentation for gnutls_sec_param_to_pk_bits... ok
+Creating documentation for gnutls_sec_param_to_symmetric_bits... ok
+Creating documentation for gnutls_server_name_get... ok
+Creating documentation for gnutls_server_name_set... ok
+Creating documentation for gnutls_session_channel_binding... ok
+Creating documentation for gnutls_session_enable_compatibility_mode... ok
+Creating documentation for gnutls_session_etm_status... ok
+Creating documentation for gnutls_session_ext_master_secret_status... ok
+Creating documentation for gnutls_session_ext_register... ok
+Creating documentation for gnutls_session_force_valid... ok
+Creating documentation for gnutls_session_get_data... ok
+Creating documentation for gnutls_session_get_data2... ok
+Creating documentation for gnutls_session_get_desc... ok
+Creating documentation for gnutls_session_get_flags... ok
+Creating documentation for gnutls_session_get_id... ok
+Creating documentation for gnutls_session_get_id2... ok
+Creating documentation for gnutls_session_get_keylog_function... ok
+Creating documentation for gnutls_session_get_master_secret... ok
+Creating documentation for gnutls_session_get_ptr... ok
+Creating documentation for gnutls_session_get_random... ok
+Creating documentation for gnutls_session_get_verify_cert_status... ok
+Creating documentation for gnutls_session_is_resumed... ok
+Creating documentation for gnutls_session_key_update... ok
+Creating documentation for gnutls_session_resumption_requested... ok
+Creating documentation for gnutls_session_set_data... ok
+Creating documentation for gnutls_session_set_id... ok
+Creating documentation for gnutls_session_set_keylog_function... ok
+Creating documentation for gnutls_session_set_premaster... ok
+Creating documentation for gnutls_session_set_ptr... ok
+Creating documentation for gnutls_session_set_verify_cert... ok
+Creating documentation for gnutls_session_set_verify_cert2... ok
+Creating documentation for gnutls_session_set_verify_function... ok
+Creating documentation for gnutls_session_supplemental_register... ok
+Creating documentation for gnutls_session_ticket_enable_client... ok
+Creating documentation for gnutls_session_ticket_enable_server... ok
+Creating documentation for gnutls_session_ticket_key_generate... ok
+Creating documentation for gnutls_session_ticket_send... ok
+Creating documentation for gnutls_set_default_priority... ok
+Creating documentation for gnutls_set_default_priority_append... ok
+Creating documentation for gnutls_sign_algorithm_get... ok
+Creating documentation for gnutls_sign_algorithm_get_client... ok
+Creating documentation for gnutls_sign_algorithm_get_requested... ok
+Creating documentation for gnutls_sign_get_hash_algorithm... ok
+Creating documentation for gnutls_sign_get_id... ok
+Creating documentation for gnutls_sign_get_name... ok
+Creating documentation for gnutls_sign_get_oid... ok
+Creating documentation for gnutls_sign_get_pk_algorithm... ok
+Creating documentation for gnutls_sign_is_secure... ok
+Creating documentation for gnutls_sign_is_secure2... ok
+Creating documentation for gnutls_sign_list... ok
+Creating documentation for gnutls_sign_supports_pk_algorithm... ok
+Creating documentation for gnutls_srp_allocate_client_credentials... ok
+Creating documentation for gnutls_srp_allocate_server_credentials... ok
+Creating documentation for gnutls_srp_base64_decode... ok
+Creating documentation for gnutls_srp_base64_decode2... ok
+Creating documentation for gnutls_srp_base64_encode... ok
+Creating documentation for gnutls_srp_base64_encode2... ok
+Creating documentation for gnutls_srp_free_client_credentials... ok
+Creating documentation for gnutls_srp_free_server_credentials... ok
+Creating documentation for gnutls_srp_server_get_username... ok
+Creating documentation for gnutls_srp_set_client_credentials... ok
+Creating documentation for gnutls_srp_set_client_credentials_function... ok
+Creating documentation for gnutls_srp_set_prime_bits... ok
+Creating documentation for gnutls_srp_set_server_credentials_file... ok
+Creating documentation for gnutls_srp_set_server_credentials_function... ok
+Creating documentation for gnutls_srp_set_server_fake_salt_seed... ok
+Creating documentation for gnutls_srp_verifier... ok
+Creating documentation for gnutls_srtp_get_keys... ok
+Creating documentation for gnutls_srtp_get_mki... ok
+Creating documentation for gnutls_srtp_get_profile_id... ok
+Creating documentation for gnutls_srtp_get_profile_name... ok
+Creating documentation for gnutls_srtp_get_selected_profile... ok
+Creating documentation for gnutls_srtp_set_mki... ok
+Creating documentation for gnutls_srtp_set_profile... ok
+Creating documentation for gnutls_srtp_set_profile_direct... ok
+Creating documentation for gnutls_store_commitment... ok
+Creating documentation for gnutls_store_pubkey... ok
+Creating documentation for gnutls_strerror... ok
+Creating documentation for gnutls_strerror_name... ok
+Creating documentation for gnutls_supplemental_get_name... ok
+Creating documentation for gnutls_supplemental_recv... ok
+Creating documentation for gnutls_supplemental_register... ok
+Creating documentation for gnutls_supplemental_send... ok
+Creating documentation for gnutls_system_recv_timeout... ok
+Creating documentation for gnutls_tdb_deinit... ok
+Creating documentation for gnutls_tdb_init... ok
+Creating documentation for gnutls_tdb_set_store_commitment_func... ok
+Creating documentation for gnutls_tdb_set_store_func... ok
+Creating documentation for gnutls_tdb_set_verify_func... ok
+Creating documentation for gnutls_transport_get_int... ok
+Creating documentation for gnutls_transport_get_int2... ok
+Creating documentation for gnutls_transport_get_ptr... ok
+Creating documentation for gnutls_transport_get_ptr2... ok
+Creating documentation for gnutls_transport_set_errno... ok
+Creating documentation for gnutls_transport_set_errno_function... ok
+Creating documentation for gnutls_transport_set_int... ok
+Creating documentation for gnutls_transport_set_int2... ok
+Creating documentation for gnutls_transport_set_ptr... ok
+Creating documentation for gnutls_transport_set_ptr2... ok
+Creating documentation for gnutls_transport_set_pull_function... ok
+Creating documentation for gnutls_transport_set_pull_timeout_function... ok
+Creating documentation for gnutls_transport_set_push_function... ok
+Creating documentation for gnutls_transport_set_vec_push_function... ok
+Creating documentation for gnutls_url_is_supported... ok
+Creating documentation for gnutls_utf8_password_normalize... ok
+Creating documentation for gnutls_verify_stored_pubkey... ok
+mv -f gnutls-api.texi-tmp gnutls-api.texi
+echo "" > socket-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/socket.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> socket-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_transport_set_fastopen... ok
+mv -f socket-api.texi-tmp socket-api.texi
+echo "" > x509-api.texi-tmp
+cat ../lib/includes/gnutls/x509.h ../lib/includes/gnutls/x509-ext.h > x509-api.texi-tmp2
+for i in `../doc/scripts/getfuncs.pl < x509-api.texi-tmp2 |sort |uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> x509-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_certificate_get_trust_list... ok
+Creating documentation for gnutls_certificate_set_trust_list... ok
+Creating documentation for gnutls_certificate_verification_profile_get_id... ok
+Creating documentation for gnutls_certificate_verification_profile_get_name... ok
+Creating documentation for gnutls_pkcs8_info... ok
+Creating documentation for gnutls_pkcs_schema_get_name... ok
+Creating documentation for gnutls_pkcs_schema_get_oid... ok
+Creating documentation for gnutls_session_set_verify_output_function... ok
+Creating documentation for gnutls_subject_alt_names_deinit... ok
+Creating documentation for gnutls_subject_alt_names_get... ok
+Creating documentation for gnutls_subject_alt_names_init... ok
+Creating documentation for gnutls_subject_alt_names_set... ok
+Creating documentation for gnutls_x509_aia_deinit... ok
+Creating documentation for gnutls_x509_aia_get... ok
+Creating documentation for gnutls_x509_aia_init... ok
+Creating documentation for gnutls_x509_aia_set... ok
+Creating documentation for gnutls_x509_aki_deinit... ok
+Creating documentation for gnutls_x509_aki_get_cert_issuer... ok
+Creating documentation for gnutls_x509_aki_get_id... ok
+Creating documentation for gnutls_x509_aki_init... ok
+Creating documentation for gnutls_x509_aki_set_cert_issuer... ok
+Creating documentation for gnutls_x509_aki_set_id... ok
+Creating documentation for gnutls_x509_cidr_to_rfc5280... ok
+Creating documentation for gnutls_x509_crl_check_issuer... ok
+Creating documentation for gnutls_x509_crl_deinit... ok
+Creating documentation for gnutls_x509_crl_dist_points_deinit... ok
+Creating documentation for gnutls_x509_crl_dist_points_get... ok
+Creating documentation for gnutls_x509_crl_dist_points_init... ok
+Creating documentation for gnutls_x509_crl_dist_points_set... ok
+Creating documentation for gnutls_x509_crl_export... ok
+Creating documentation for gnutls_x509_crl_export2... ok
+Creating documentation for gnutls_x509_crl_get_authority_key_gn_serial... ok
+Creating documentation for gnutls_x509_crl_get_authority_key_id... ok
+Creating documentation for gnutls_x509_crl_get_crt_count... ok
+Creating documentation for gnutls_x509_crl_get_crt_serial... ok
+Creating documentation for gnutls_x509_crl_get_dn_oid... ok
+Creating documentation for gnutls_x509_crl_get_extension_data... ok
+Creating documentation for gnutls_x509_crl_get_extension_data2... ok
+Creating documentation for gnutls_x509_crl_get_extension_info... ok
+Creating documentation for gnutls_x509_crl_get_extension_oid... ok
+Creating documentation for gnutls_x509_crl_get_issuer_dn... ok
+Creating documentation for gnutls_x509_crl_get_issuer_dn2... ok
+Creating documentation for gnutls_x509_crl_get_issuer_dn3... ok
+Creating documentation for gnutls_x509_crl_get_issuer_dn_by_oid... ok
+Creating documentation for gnutls_x509_crl_get_next_update... ok
+Creating documentation for gnutls_x509_crl_get_number... ok
+Creating documentation for gnutls_x509_crl_get_raw_issuer_dn... ok
+Creating documentation for gnutls_x509_crl_get_signature... ok
+Creating documentation for gnutls_x509_crl_get_signature_algorithm... ok
+Creating documentation for gnutls_x509_crl_get_signature_oid... ok
+Creating documentation for gnutls_x509_crl_get_this_update... ok
+Creating documentation for gnutls_x509_crl_get_version... ok
+Creating documentation for gnutls_x509_crl_import... ok
+Creating documentation for gnutls_x509_crl_init... ok
+Creating documentation for gnutls_x509_crl_iter_crt_serial... ok
+Creating documentation for gnutls_x509_crl_iter_deinit... ok
+Creating documentation for gnutls_x509_crl_list_import... ok
+Creating documentation for gnutls_x509_crl_list_import2... ok
+Creating documentation for gnutls_x509_crl_print... ok
+Creating documentation for gnutls_x509_crl_set_authority_key_id... ok
+Creating documentation for gnutls_x509_crl_set_crt... ok
+Creating documentation for gnutls_x509_crl_set_crt_serial... ok
+Creating documentation for gnutls_x509_crl_set_next_update... ok
+Creating documentation for gnutls_x509_crl_set_number... ok
+Creating documentation for gnutls_x509_crl_set_this_update... ok
+Creating documentation for gnutls_x509_crl_set_version... ok
+Creating documentation for gnutls_x509_crl_sign... ok
+Creating documentation for gnutls_x509_crl_sign2... ok
+Creating documentation for gnutls_x509_crl_verify... ok
+Creating documentation for gnutls_x509_crq_deinit... ok
+Creating documentation for gnutls_x509_crq_export... ok
+Creating documentation for gnutls_x509_crq_export2... ok
+Creating documentation for gnutls_x509_crq_get_attribute_by_oid... ok
+Creating documentation for gnutls_x509_crq_get_attribute_data... ok
+Creating documentation for gnutls_x509_crq_get_attribute_info... ok
+Creating documentation for gnutls_x509_crq_get_basic_constraints... ok
+Creating documentation for gnutls_x509_crq_get_challenge_password... ok
+Creating documentation for gnutls_x509_crq_get_dn... ok
+Creating documentation for gnutls_x509_crq_get_dn2... ok
+Creating documentation for gnutls_x509_crq_get_dn3... ok
+Creating documentation for gnutls_x509_crq_get_dn_by_oid... ok
+Creating documentation for gnutls_x509_crq_get_dn_oid... ok
+Creating documentation for gnutls_x509_crq_get_extension_by_oid... ok
+Creating documentation for gnutls_x509_crq_get_extension_by_oid2... ok
+Creating documentation for gnutls_x509_crq_get_extension_data... ok
+Creating documentation for gnutls_x509_crq_get_extension_data2... ok
+Creating documentation for gnutls_x509_crq_get_extension_info... ok
+Creating documentation for gnutls_x509_crq_get_key_id... ok
+Creating documentation for gnutls_x509_crq_get_key_purpose_oid... ok
+Creating documentation for gnutls_x509_crq_get_key_rsa_raw... ok
+Creating documentation for gnutls_x509_crq_get_key_usage... ok
+Creating documentation for gnutls_x509_crq_get_pk_algorithm... ok
+Creating documentation for gnutls_x509_crq_get_pk_oid... ok
+Creating documentation for gnutls_x509_crq_get_private_key_usage_period... ok
+Creating documentation for gnutls_x509_crq_get_signature_algorithm... ok
+Creating documentation for gnutls_x509_crq_get_signature_oid... ok
+Creating documentation for gnutls_x509_crq_get_spki... ok
+Creating documentation for gnutls_x509_crq_get_subject_alt_name... ok
+Creating documentation for gnutls_x509_crq_get_subject_alt_othername_oid... ok
+Creating documentation for gnutls_x509_crq_get_tlsfeatures... ok
+Creating documentation for gnutls_x509_crq_get_version... ok
+Creating documentation for gnutls_x509_crq_import... ok
+Creating documentation for gnutls_x509_crq_init... ok
+Creating documentation for gnutls_x509_crq_print... ok
+Creating documentation for gnutls_x509_crq_set_attribute_by_oid... ok
+Creating documentation for gnutls_x509_crq_set_basic_constraints... ok
+Creating documentation for gnutls_x509_crq_set_challenge_password... ok
+Creating documentation for gnutls_x509_crq_set_dn... ok
+Creating documentation for gnutls_x509_crq_set_dn_by_oid... ok
+Creating documentation for gnutls_x509_crq_set_extension_by_oid... ok
+Creating documentation for gnutls_x509_crq_set_key... ok
+Creating documentation for gnutls_x509_crq_set_key_purpose_oid... ok
+Creating documentation for gnutls_x509_crq_set_key_rsa_raw... ok
+Creating documentation for gnutls_x509_crq_set_key_usage... ok
+Creating documentation for gnutls_x509_crq_set_private_key_usage_period... ok
+Creating documentation for gnutls_x509_crq_set_spki... ok
+Creating documentation for gnutls_x509_crq_set_subject_alt_name... ok
+Creating documentation for gnutls_x509_crq_set_subject_alt_othername... ok
+Creating documentation for gnutls_x509_crq_set_tlsfeatures... ok
+Creating documentation for gnutls_x509_crq_set_version... ok
+Creating documentation for gnutls_x509_crq_sign... ok
+Creating documentation for gnutls_x509_crq_sign2... ok
+Creating documentation for gnutls_x509_crq_verify... ok
+Creating documentation for gnutls_x509_crt_check_email... ok
+Creating documentation for gnutls_x509_crt_check_hostname... ok
+Creating documentation for gnutls_x509_crt_check_hostname2... ok
+Creating documentation for gnutls_x509_crt_check_ip... ok
+Creating documentation for gnutls_x509_crt_check_issuer... ok
+Creating documentation for gnutls_x509_crt_check_key_purpose... ok
+Creating documentation for gnutls_x509_crt_check_revocation... ok
+Creating documentation for gnutls_x509_crt_cpy_crl_dist_points... ok
+Creating documentation for gnutls_x509_crt_deinit... ok
+Creating documentation for gnutls_x509_crt_equals... ok
+Creating documentation for gnutls_x509_crt_equals2... ok
+Creating documentation for gnutls_x509_crt_export... ok
+Creating documentation for gnutls_x509_crt_export2... ok
+Creating documentation for gnutls_x509_crt_get_activation_time... ok
+Creating documentation for gnutls_x509_crt_get_authority_info_access... ok
+Creating documentation for gnutls_x509_crt_get_authority_key_gn_serial... ok
+Creating documentation for gnutls_x509_crt_get_authority_key_id... ok
+Creating documentation for gnutls_x509_crt_get_basic_constraints... ok
+Creating documentation for gnutls_x509_crt_get_ca_status... ok
+Creating documentation for gnutls_x509_crt_get_crl_dist_points... ok
+Creating documentation for gnutls_x509_crt_get_dn... ok
+Creating documentation for gnutls_x509_crt_get_dn2... ok
+Creating documentation for gnutls_x509_crt_get_dn3... ok
+Creating documentation for gnutls_x509_crt_get_dn_by_oid... ok
+Creating documentation for gnutls_x509_crt_get_dn_oid... ok
+Creating documentation for gnutls_x509_crt_get_expiration_time... ok
+Creating documentation for gnutls_x509_crt_get_extension_by_oid... ok
+Creating documentation for gnutls_x509_crt_get_extension_by_oid2... ok
+Creating documentation for gnutls_x509_crt_get_extension_data... ok
+Creating documentation for gnutls_x509_crt_get_extension_data2... ok
+Creating documentation for gnutls_x509_crt_get_extension_info... ok
+Creating documentation for gnutls_x509_crt_get_extension_oid... ok
+Creating documentation for gnutls_x509_crt_get_fingerprint... ok
+Creating documentation for gnutls_x509_crt_get_inhibit_anypolicy... ok
+Creating documentation for gnutls_x509_crt_get_issuer... ok
+Creating documentation for gnutls_x509_crt_get_issuer_alt_name... ok
+Creating documentation for gnutls_x509_crt_get_issuer_alt_name2... ok
+Creating documentation for gnutls_x509_crt_get_issuer_alt_othername_oid... ok
+Creating documentation for gnutls_x509_crt_get_issuer_dn... ok
+Creating documentation for gnutls_x509_crt_get_issuer_dn2... ok
+Creating documentation for gnutls_x509_crt_get_issuer_dn3... ok
+Creating documentation for gnutls_x509_crt_get_issuer_dn_by_oid... ok
+Creating documentation for gnutls_x509_crt_get_issuer_dn_oid... ok
+Creating documentation for gnutls_x509_crt_get_issuer_unique_id... ok
+Creating documentation for gnutls_x509_crt_get_key_id... ok
+Creating documentation for gnutls_x509_crt_get_key_purpose_oid... ok
+Creating documentation for gnutls_x509_crt_get_key_usage... ok
+Creating documentation for gnutls_x509_crt_get_name_constraints... ok
+Creating documentation for gnutls_x509_crt_get_pk_algorithm... ok
+Creating documentation for gnutls_x509_crt_get_pk_dsa_raw... ok
+Creating documentation for gnutls_x509_crt_get_pk_ecc_raw... ok
+Creating documentation for gnutls_x509_crt_get_pk_gost_raw... ok
+Creating documentation for gnutls_x509_crt_get_pk_oid... ok
+Creating documentation for gnutls_x509_crt_get_pk_rsa_raw... ok
+Creating documentation for gnutls_x509_crt_get_policy... ok
+Creating documentation for gnutls_x509_crt_get_private_key_usage_period... ok
+Creating documentation for gnutls_x509_crt_get_proxy... ok
+Creating documentation for gnutls_x509_crt_get_raw_dn... ok
+Creating documentation for gnutls_x509_crt_get_raw_issuer_dn... ok
+Creating documentation for gnutls_x509_crt_get_serial... ok
+Creating documentation for gnutls_x509_crt_get_signature... ok
+Creating documentation for gnutls_x509_crt_get_signature_algorithm... ok
+Creating documentation for gnutls_x509_crt_get_signature_oid... ok
+Creating documentation for gnutls_x509_crt_get_spki... ok
+Creating documentation for gnutls_x509_crt_get_subject... ok
+Creating documentation for gnutls_x509_crt_get_subject_alt_name... ok
+Creating documentation for gnutls_x509_crt_get_subject_alt_name2... ok
+Creating documentation for gnutls_x509_crt_get_subject_alt_othername_oid... ok
+Creating documentation for gnutls_x509_crt_get_subject_key_id... ok
+Creating documentation for gnutls_x509_crt_get_subject_unique_id... ok
+Creating documentation for gnutls_x509_crt_get_tlsfeatures... ok
+Creating documentation for gnutls_x509_crt_get_version... ok
+Creating documentation for gnutls_x509_crt_import... ok
+Creating documentation for gnutls_x509_crt_import_url... ok
+Creating documentation for gnutls_x509_crt_init... ok
+Creating documentation for gnutls_x509_crt_list_import... ok
+Creating documentation for gnutls_x509_crt_list_import2... ok
+Creating documentation for gnutls_x509_crt_list_import_url... ok
+Creating documentation for gnutls_x509_crt_list_verify... ok
+Creating documentation for gnutls_x509_crt_print... ok
+Creating documentation for gnutls_x509_crt_set_activation_time... ok
+Creating documentation for gnutls_x509_crt_set_authority_info_access... ok
+Creating documentation for gnutls_x509_crt_set_authority_key_id... ok
+Creating documentation for gnutls_x509_crt_set_basic_constraints... ok
+Creating documentation for gnutls_x509_crt_set_ca_status... ok
+Creating documentation for gnutls_x509_crt_set_crl_dist_points... ok
+Creating documentation for gnutls_x509_crt_set_crl_dist_points2... ok
+Creating documentation for gnutls_x509_crt_set_crq... ok
+Creating documentation for gnutls_x509_crt_set_crq_extension_by_oid... ok
+Creating documentation for gnutls_x509_crt_set_crq_extensions... ok
+Creating documentation for gnutls_x509_crt_set_dn... ok
+Creating documentation for gnutls_x509_crt_set_dn_by_oid... ok
+Creating documentation for gnutls_x509_crt_set_expiration_time... ok
+Creating documentation for gnutls_x509_crt_set_extension_by_oid... ok
+Creating documentation for gnutls_x509_crt_set_flags... ok
+Creating documentation for gnutls_x509_crt_set_inhibit_anypolicy... ok
+Creating documentation for gnutls_x509_crt_set_issuer_alt_name... ok
+Creating documentation for gnutls_x509_crt_set_issuer_alt_othername... ok
+Creating documentation for gnutls_x509_crt_set_issuer_dn... ok
+Creating documentation for gnutls_x509_crt_set_issuer_dn_by_oid... ok
+Creating documentation for gnutls_x509_crt_set_issuer_unique_id... ok
+Creating documentation for gnutls_x509_crt_set_key... ok
+Creating documentation for gnutls_x509_crt_set_key_purpose_oid... ok
+Creating documentation for gnutls_x509_crt_set_key_usage... ok
+Creating documentation for gnutls_x509_crt_set_name_constraints... ok
+Creating documentation for gnutls_x509_crt_set_pin_function... ok
+Creating documentation for gnutls_x509_crt_set_policy... ok
+Creating documentation for gnutls_x509_crt_set_private_key_usage_period... ok
+Creating documentation for gnutls_x509_crt_set_proxy... ok
+Creating documentation for gnutls_x509_crt_set_proxy_dn... ok
+Creating documentation for gnutls_x509_crt_set_serial... ok
+Creating documentation for gnutls_x509_crt_set_spki... ok
+Creating documentation for gnutls_x509_crt_set_subject_alt_name... ok
+Creating documentation for gnutls_x509_crt_set_subject_alt_othername... ok
+Creating documentation for gnutls_x509_crt_set_subject_alternative_name... ok
+Creating documentation for gnutls_x509_crt_set_subject_key_id... ok
+Creating documentation for gnutls_x509_crt_set_subject_unique_id... ok
+Creating documentation for gnutls_x509_crt_set_tlsfeatures... ok
+Creating documentation for gnutls_x509_crt_set_version... ok
+Creating documentation for gnutls_x509_crt_sign... ok
+Creating documentation for gnutls_x509_crt_sign2... ok
+Creating documentation for gnutls_x509_crt_verify... ok
+Creating documentation for gnutls_x509_crt_verify_data2... ok
+Creating documentation for gnutls_x509_dn_deinit... ok
+Creating documentation for gnutls_x509_dn_export... ok
+Creating documentation for gnutls_x509_dn_export2... ok
+Creating documentation for gnutls_x509_dn_get_rdn_ava... ok
+Creating documentation for gnutls_x509_dn_get_str... ok
+Creating documentation for gnutls_x509_dn_get_str2... ok
+Creating documentation for gnutls_x509_dn_import... ok
+Creating documentation for gnutls_x509_dn_init... ok
+Creating documentation for gnutls_x509_dn_oid_known... ok
+Creating documentation for gnutls_x509_dn_oid_name... ok
+Creating documentation for gnutls_x509_dn_set_str... ok
+Creating documentation for gnutls_x509_ext_deinit... ok
+Creating documentation for gnutls_x509_ext_export_aia... ok
+Creating documentation for gnutls_x509_ext_export_authority_key_id... ok
+Creating documentation for gnutls_x509_ext_export_basic_constraints... ok
+Creating documentation for gnutls_x509_ext_export_crl_dist_points... ok
+Creating documentation for gnutls_x509_ext_export_inhibit_anypolicy... ok
+Creating documentation for gnutls_x509_ext_export_key_purposes... ok
+Creating documentation for gnutls_x509_ext_export_key_usage... ok
+Creating documentation for gnutls_x509_ext_export_name_constraints... ok
+Creating documentation for gnutls_x509_ext_export_policies... ok
+Creating documentation for gnutls_x509_ext_export_private_key_usage_period... ok
+Creating documentation for gnutls_x509_ext_export_proxy... ok
+Creating documentation for gnutls_x509_ext_export_subject_alt_names... ok
+Creating documentation for gnutls_x509_ext_export_subject_key_id... ok
+Creating documentation for gnutls_x509_ext_export_tlsfeatures... ok
+Creating documentation for gnutls_x509_ext_import_aia... ok
+Creating documentation for gnutls_x509_ext_import_authority_key_id... ok
+Creating documentation for gnutls_x509_ext_import_basic_constraints... ok
+Creating documentation for gnutls_x509_ext_import_crl_dist_points... ok
+Creating documentation for gnutls_x509_ext_import_inhibit_anypolicy... ok
+Creating documentation for gnutls_x509_ext_import_key_purposes... ok
+Creating documentation for gnutls_x509_ext_import_key_usage... ok
+Creating documentation for gnutls_x509_ext_import_name_constraints... ok
+Creating documentation for gnutls_x509_ext_import_policies... ok
+Creating documentation for gnutls_x509_ext_import_private_key_usage_period... ok
+Creating documentation for gnutls_x509_ext_import_proxy... ok
+Creating documentation for gnutls_x509_ext_import_subject_alt_names... ok
+Creating documentation for gnutls_x509_ext_import_subject_key_id... ok
+Creating documentation for gnutls_x509_ext_import_tlsfeatures... ok
+Creating documentation for gnutls_x509_ext_print... ok
+Creating documentation for gnutls_x509_key_purpose_deinit... ok
+Creating documentation for gnutls_x509_key_purpose_get... ok
+Creating documentation for gnutls_x509_key_purpose_init... ok
+Creating documentation for gnutls_x509_key_purpose_set... ok
+Creating documentation for gnutls_x509_name_constraints_add_excluded... ok
+Creating documentation for gnutls_x509_name_constraints_add_permitted... ok
+Creating documentation for gnutls_x509_name_constraints_check... ok
+Creating documentation for gnutls_x509_name_constraints_check_crt... ok
+Creating documentation for gnutls_x509_name_constraints_deinit... ok
+Creating documentation for gnutls_x509_name_constraints_get_excluded... ok
+Creating documentation for gnutls_x509_name_constraints_get_permitted... ok
+Creating documentation for gnutls_x509_name_constraints_init... ok
+Creating documentation for gnutls_x509_othername_to_virtual... ok
+Creating documentation for gnutls_x509_policies_deinit... ok
+Creating documentation for gnutls_x509_policies_get... ok
+Creating documentation for gnutls_x509_policies_init... ok
+Creating documentation for gnutls_x509_policies_set... ok
+Creating documentation for gnutls_x509_policy_release... ok
+Creating documentation for gnutls_x509_privkey_cpy... ok
+Creating documentation for gnutls_x509_privkey_deinit... ok
+Creating documentation for gnutls_x509_privkey_export... ok
+Creating documentation for gnutls_x509_privkey_export2... ok
+Creating documentation for gnutls_x509_privkey_export2_pkcs8... ok
+Creating documentation for gnutls_x509_privkey_export_dsa_raw... ok
+Creating documentation for gnutls_x509_privkey_export_ecc_raw... ok
+Creating documentation for gnutls_x509_privkey_export_gost_raw... ok
+Creating documentation for gnutls_x509_privkey_export_pkcs8... ok
+Creating documentation for gnutls_x509_privkey_export_rsa_raw... ok
+Creating documentation for gnutls_x509_privkey_export_rsa_raw2... ok
+Creating documentation for gnutls_x509_privkey_fix... ok
+Creating documentation for gnutls_x509_privkey_generate... ok
+Creating documentation for gnutls_x509_privkey_generate2... ok
+Creating documentation for gnutls_x509_privkey_get_key_id... ok
+Creating documentation for gnutls_x509_privkey_get_pk_algorithm... ok
+Creating documentation for gnutls_x509_privkey_get_pk_algorithm2... ok
+Creating documentation for gnutls_x509_privkey_get_seed... ok
+Creating documentation for gnutls_x509_privkey_get_spki... ok
+Creating documentation for gnutls_x509_privkey_import... ok
+Creating documentation for gnutls_x509_privkey_import2... ok
+Creating documentation for gnutls_x509_privkey_import_dsa_raw... ok
+Creating documentation for gnutls_x509_privkey_import_ecc_raw... ok
+Creating documentation for gnutls_x509_privkey_import_gost_raw... ok
+Creating documentation for gnutls_x509_privkey_import_openssl... ok
+Creating documentation for gnutls_x509_privkey_import_pkcs8... ok
+Creating documentation for gnutls_x509_privkey_import_rsa_raw... ok
+Creating documentation for gnutls_x509_privkey_import_rsa_raw2... ok
+Creating documentation for gnutls_x509_privkey_init... ok
+Creating documentation for gnutls_x509_privkey_sec_param... ok
+Creating documentation for gnutls_x509_privkey_set_flags... ok
+Creating documentation for gnutls_x509_privkey_set_pin_function... ok
+Creating documentation for gnutls_x509_privkey_set_spki... ok
+Creating documentation for gnutls_x509_privkey_sign_data... ok
+Creating documentation for gnutls_x509_privkey_verify_params... ok
+Creating documentation for gnutls_x509_privkey_verify_seed... ok
+Creating documentation for gnutls_x509_rdn_get... ok
+Creating documentation for gnutls_x509_rdn_get2... ok
+Creating documentation for gnutls_x509_rdn_get_by_oid... ok
+Creating documentation for gnutls_x509_rdn_get_oid... ok
+Creating documentation for gnutls_x509_spki_deinit... ok
+Creating documentation for gnutls_x509_spki_get_rsa_pss_params... ok
+Creating documentation for gnutls_x509_spki_init... ok
+Creating documentation for gnutls_x509_spki_set_rsa_pss_params... ok
+Creating documentation for gnutls_x509_tlsfeatures_add... ok
+Creating documentation for gnutls_x509_tlsfeatures_check_crt... ok
+Creating documentation for gnutls_x509_tlsfeatures_deinit... ok
+Creating documentation for gnutls_x509_tlsfeatures_get... ok
+Creating documentation for gnutls_x509_tlsfeatures_init... ok
+Creating documentation for gnutls_x509_trust_list_add_cas... ok
+Creating documentation for gnutls_x509_trust_list_add_crls... ok
+Creating documentation for gnutls_x509_trust_list_add_named_crt... ok
+Creating documentation for gnutls_x509_trust_list_add_system_trust... ok
+Creating documentation for gnutls_x509_trust_list_add_trust_dir... ok
+Creating documentation for gnutls_x509_trust_list_add_trust_file... ok
+Creating documentation for gnutls_x509_trust_list_add_trust_mem... ok
+Creating documentation for gnutls_x509_trust_list_deinit... ok
+Creating documentation for gnutls_x509_trust_list_get_issuer... ok
+Creating documentation for gnutls_x509_trust_list_get_issuer_by_dn... ok
+Creating documentation for gnutls_x509_trust_list_get_issuer_by_subject_key_id... ok
+Creating documentation for gnutls_x509_trust_list_get_ptr... ok
+Creating documentation for gnutls_x509_trust_list_init... ok
+Creating documentation for gnutls_x509_trust_list_iter_deinit... ok
+Creating documentation for gnutls_x509_trust_list_iter_get_ca... ok
+Creating documentation for gnutls_x509_trust_list_remove_cas... ok
+Creating documentation for gnutls_x509_trust_list_remove_trust_file... ok
+Creating documentation for gnutls_x509_trust_list_remove_trust_mem... ok
+Creating documentation for gnutls_x509_trust_list_set_getissuer_function... ok
+Creating documentation for gnutls_x509_trust_list_set_ptr... ok
+Creating documentation for gnutls_x509_trust_list_verify_crt... ok
+Creating documentation for gnutls_x509_trust_list_verify_crt2... ok
+Creating documentation for gnutls_x509_trust_list_verify_named_crt... ok
+rm -f x509-api.texi-tmp2
+mv -f x509-api.texi-tmp x509-api.texi
+echo "" > pkcs12-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/pkcs12.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/x509/*.c ../lib/*.c ../lib/system/certs.c >> pkcs12-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_pkcs12_bag_decrypt... ok
+Creating documentation for gnutls_pkcs12_bag_deinit... ok
+Creating documentation for gnutls_pkcs12_bag_enc_info... ok
+Creating documentation for gnutls_pkcs12_bag_encrypt... ok
+Creating documentation for gnutls_pkcs12_bag_get_count... ok
+Creating documentation for gnutls_pkcs12_bag_get_data... ok
+Creating documentation for gnutls_pkcs12_bag_get_friendly_name... ok
+Creating documentation for gnutls_pkcs12_bag_get_key_id... ok
+Creating documentation for gnutls_pkcs12_bag_get_type... ok
+Creating documentation for gnutls_pkcs12_bag_init... ok
+Creating documentation for gnutls_pkcs12_bag_set_crl... ok
+Creating documentation for gnutls_pkcs12_bag_set_crt... ok
+Creating documentation for gnutls_pkcs12_bag_set_data... ok
+Creating documentation for gnutls_pkcs12_bag_set_friendly_name... ok
+Creating documentation for gnutls_pkcs12_bag_set_key_id... ok
+Creating documentation for gnutls_pkcs12_bag_set_privkey... ok
+Creating documentation for gnutls_pkcs12_deinit... ok
+Creating documentation for gnutls_pkcs12_export... ok
+Creating documentation for gnutls_pkcs12_export2... ok
+Creating documentation for gnutls_pkcs12_generate_mac... ok
+Creating documentation for gnutls_pkcs12_generate_mac2... ok
+Creating documentation for gnutls_pkcs12_get_bag... ok
+Creating documentation for gnutls_pkcs12_import... ok
+Creating documentation for gnutls_pkcs12_init... ok
+Creating documentation for gnutls_pkcs12_mac_info... ok
+Creating documentation for gnutls_pkcs12_set_bag... ok
+Creating documentation for gnutls_pkcs12_simple_parse... ok
+Creating documentation for gnutls_pkcs12_verify_mac... ok
+mv -f pkcs12-api.texi-tmp pkcs12-api.texi
+echo "" > tpm-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/tpm.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> tpm-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_tpm_get_registered... ok
+Creating documentation for gnutls_tpm_key_list_deinit... ok
+Creating documentation for gnutls_tpm_key_list_get_url... ok
+Creating documentation for gnutls_tpm_privkey_delete... ok
+Creating documentation for gnutls_tpm_privkey_generate... ok
+mv -f tpm-api.texi-tmp tpm-api.texi
+echo "" > pkcs11-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/pkcs11.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> pkcs11-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_pkcs11_add_provider... ok
+Creating documentation for gnutls_pkcs11_copy_attached_extension... ok
+Creating documentation for gnutls_pkcs11_copy_pubkey... ok
+Creating documentation for gnutls_pkcs11_copy_secret_key... ok
+Creating documentation for gnutls_pkcs11_copy_x509_crt... ok
+Creating documentation for gnutls_pkcs11_copy_x509_crt2... ok
+Creating documentation for gnutls_pkcs11_copy_x509_privkey... ok
+Creating documentation for gnutls_pkcs11_copy_x509_privkey2... ok
+Creating documentation for gnutls_pkcs11_crt_is_known... ok
+Creating documentation for gnutls_pkcs11_deinit... ok
+Creating documentation for gnutls_pkcs11_delete_url... ok
+Creating documentation for gnutls_pkcs11_get_pin_function... ok
+Creating documentation for gnutls_pkcs11_get_raw_issuer... ok
+Creating documentation for gnutls_pkcs11_get_raw_issuer_by_dn... ok
+Creating documentation for gnutls_pkcs11_get_raw_issuer_by_subject_key_id... ok
+Creating documentation for gnutls_pkcs11_init... ok
+Creating documentation for gnutls_pkcs11_obj_deinit... ok
+Creating documentation for gnutls_pkcs11_obj_export... ok
+Creating documentation for gnutls_pkcs11_obj_export2... ok
+Creating documentation for gnutls_pkcs11_obj_export3... ok
+Creating documentation for gnutls_pkcs11_obj_export_url... ok
+Creating documentation for gnutls_pkcs11_obj_flags_get_str... ok
+Creating documentation for gnutls_pkcs11_obj_get_exts... ok
+Creating documentation for gnutls_pkcs11_obj_get_flags... ok
+Creating documentation for gnutls_pkcs11_obj_get_info... ok
+Creating documentation for gnutls_pkcs11_obj_get_ptr... ok
+Creating documentation for gnutls_pkcs11_obj_get_type... ok
+Creating documentation for gnutls_pkcs11_obj_import_url... ok
+Creating documentation for gnutls_pkcs11_obj_init... ok
+Creating documentation for gnutls_pkcs11_obj_list_import_url3... ok
+Creating documentation for gnutls_pkcs11_obj_list_import_url4... ok
+Creating documentation for gnutls_pkcs11_obj_set_info... ok
+Creating documentation for gnutls_pkcs11_obj_set_pin_function... ok
+Creating documentation for gnutls_pkcs11_privkey_cpy... ok
+Creating documentation for gnutls_pkcs11_privkey_deinit... ok
+Creating documentation for gnutls_pkcs11_privkey_export_pubkey... ok
+Creating documentation for gnutls_pkcs11_privkey_export_url... ok
+Creating documentation for gnutls_pkcs11_privkey_generate... ok
+Creating documentation for gnutls_pkcs11_privkey_generate2... ok
+Creating documentation for gnutls_pkcs11_privkey_generate3... ok
+Creating documentation for gnutls_pkcs11_privkey_get_info... ok
+Creating documentation for gnutls_pkcs11_privkey_get_pk_algorithm... ok
+Creating documentation for gnutls_pkcs11_privkey_import_url... ok
+Creating documentation for gnutls_pkcs11_privkey_init... ok
+Creating documentation for gnutls_pkcs11_privkey_set_pin_function... ok
+Creating documentation for gnutls_pkcs11_privkey_status... ok
+Creating documentation for gnutls_pkcs11_reinit... ok
+Creating documentation for gnutls_pkcs11_set_pin_function... ok
+Creating documentation for gnutls_pkcs11_set_token_function... ok
+Creating documentation for gnutls_pkcs11_token_check_mechanism... ok
+Creating documentation for gnutls_pkcs11_token_get_flags... ok
+Creating documentation for gnutls_pkcs11_token_get_info... ok
+Creating documentation for gnutls_pkcs11_token_get_mechanism... ok
+Creating documentation for gnutls_pkcs11_token_get_ptr... ok
+Creating documentation for gnutls_pkcs11_token_get_random... ok
+Creating documentation for gnutls_pkcs11_token_get_url... ok
+Creating documentation for gnutls_pkcs11_token_init... ok
+Creating documentation for gnutls_pkcs11_token_set_pin... ok
+Creating documentation for gnutls_pkcs11_type_get_name... ok
+Creating documentation for gnutls_x509_crt_import_pkcs11... ok
+Creating documentation for gnutls_x509_crt_list_import_pkcs11... ok
+mv -f pkcs11-api.texi-tmp pkcs11-api.texi
+echo "" > abstract-api.texi-tmp
+cat ../lib/includes/gnutls/abstract.h ../lib/includes/gnutls/urls.h ../lib/includes/gnutls/system-keys.h >abstract-api.texi-headers-tmp
+for i in `../doc/scripts/getfuncs.pl < abstract-api.texi-headers-tmp |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> abstract-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_certificate_set_key... ok
+Creating documentation for gnutls_certificate_set_retrieve_function2... ok
+Creating documentation for gnutls_certificate_set_retrieve_function3... ok
+Creating documentation for gnutls_pcert_deinit... ok
+Creating documentation for gnutls_pcert_export_openpgp... ok
+Creating documentation for gnutls_pcert_export_x509... ok
+Creating documentation for gnutls_pcert_import_openpgp... ok
+Creating documentation for gnutls_pcert_import_openpgp_raw... ok
+Creating documentation for gnutls_pcert_import_rawpk... ok
+Creating documentation for gnutls_pcert_import_rawpk_raw... ok
+Creating documentation for gnutls_pcert_import_x509... ok
+Creating documentation for gnutls_pcert_import_x509_list... ok
+Creating documentation for gnutls_pcert_import_x509_raw... ok
+Creating documentation for gnutls_pcert_list_import_x509_file... ok
+Creating documentation for gnutls_pcert_list_import_x509_raw... ok
+Creating documentation for gnutls_privkey_decrypt_data... ok
+Creating documentation for gnutls_privkey_decrypt_data2... ok
+Creating documentation for gnutls_privkey_deinit... ok
+Creating documentation for gnutls_privkey_export_dsa_raw... ok
+Creating documentation for gnutls_privkey_export_dsa_raw2... ok
+Creating documentation for gnutls_privkey_export_ecc_raw... ok
+Creating documentation for gnutls_privkey_export_ecc_raw2... ok
+Creating documentation for gnutls_privkey_export_gost_raw2... ok
+Creating documentation for gnutls_privkey_export_openpgp... ok
+Creating documentation for gnutls_privkey_export_pkcs11... ok
+Creating documentation for gnutls_privkey_export_rsa_raw... ok
+Creating documentation for gnutls_privkey_export_rsa_raw2... ok
+Creating documentation for gnutls_privkey_export_x509... ok
+Creating documentation for gnutls_privkey_generate... ok
+Creating documentation for gnutls_privkey_generate2... ok
+Creating documentation for gnutls_privkey_get_pk_algorithm... ok
+Creating documentation for gnutls_privkey_get_seed... ok
+Creating documentation for gnutls_privkey_get_spki... ok
+Creating documentation for gnutls_privkey_get_type... ok
+Creating documentation for gnutls_privkey_import_dsa_raw... ok
+Creating documentation for gnutls_privkey_import_ecc_raw... ok
+Creating documentation for gnutls_privkey_import_ext... ok
+Creating documentation for gnutls_privkey_import_ext2... ok
+Creating documentation for gnutls_privkey_import_ext3... ok
+Creating documentation for gnutls_privkey_import_ext4... ok
+Creating documentation for gnutls_privkey_import_gost_raw... ok
+Creating documentation for gnutls_privkey_import_openpgp... ok
+Creating documentation for gnutls_privkey_import_openpgp_raw... ok
+Creating documentation for gnutls_privkey_import_pkcs11... ok
+Creating documentation for gnutls_privkey_import_pkcs11_url... ok
+Creating documentation for gnutls_privkey_import_rsa_raw... ok
+Creating documentation for gnutls_privkey_import_tpm_raw... ok
+Creating documentation for gnutls_privkey_import_tpm_url... ok
+Creating documentation for gnutls_privkey_import_url... ok
+Creating documentation for gnutls_privkey_import_x509... ok
+Creating documentation for gnutls_privkey_import_x509_raw... ok
+Creating documentation for gnutls_privkey_init... ok
+Creating documentation for gnutls_privkey_set_flags... ok
+Creating documentation for gnutls_privkey_set_pin_function... ok
+Creating documentation for gnutls_privkey_set_spki... ok
+Creating documentation for gnutls_privkey_sign_data... ok
+Creating documentation for gnutls_privkey_sign_data2... ok
+Creating documentation for gnutls_privkey_sign_hash... ok
+Creating documentation for gnutls_privkey_sign_hash2... ok
+Creating documentation for gnutls_privkey_status... ok
+Creating documentation for gnutls_privkey_verify_params... ok
+Creating documentation for gnutls_privkey_verify_seed... ok
+Creating documentation for gnutls_pubkey_deinit... ok
+Creating documentation for gnutls_pubkey_encrypt_data... ok
+Creating documentation for gnutls_pubkey_export... ok
+Creating documentation for gnutls_pubkey_export2... ok
+Creating documentation for gnutls_pubkey_export_dsa_raw... ok
+Creating documentation for gnutls_pubkey_export_dsa_raw2... ok
+Creating documentation for gnutls_pubkey_export_ecc_raw... ok
+Creating documentation for gnutls_pubkey_export_ecc_raw2... ok
+Creating documentation for gnutls_pubkey_export_ecc_x962... ok
+Creating documentation for gnutls_pubkey_export_gost_raw2... ok
+Creating documentation for gnutls_pubkey_export_rsa_raw... ok
+Creating documentation for gnutls_pubkey_export_rsa_raw2... ok
+Creating documentation for gnutls_pubkey_get_key_id... ok
+Creating documentation for gnutls_pubkey_get_key_usage... ok
+Creating documentation for gnutls_pubkey_get_openpgp_key_id... ok
+Creating documentation for gnutls_pubkey_get_pk_algorithm... ok
+Creating documentation for gnutls_pubkey_get_preferred_hash_algorithm... ok
+Creating documentation for gnutls_pubkey_get_spki... ok
+Creating documentation for gnutls_pubkey_import... ok
+Creating documentation for gnutls_pubkey_import_dsa_raw... ok
+Creating documentation for gnutls_pubkey_import_ecc_raw... ok
+Creating documentation for gnutls_pubkey_import_ecc_x962... ok
+Creating documentation for gnutls_pubkey_import_gost_raw... ok
+Creating documentation for gnutls_pubkey_import_openpgp... ok
+Creating documentation for gnutls_pubkey_import_openpgp_raw... ok
+Creating documentation for gnutls_pubkey_import_pkcs11... ok
+Creating documentation for gnutls_pubkey_import_privkey... ok
+Creating documentation for gnutls_pubkey_import_rsa_raw... ok
+Creating documentation for gnutls_pubkey_import_tpm_raw... ok
+Creating documentation for gnutls_pubkey_import_tpm_url... ok
+Creating documentation for gnutls_pubkey_import_url... ok
+Creating documentation for gnutls_pubkey_import_x509... ok
+Creating documentation for gnutls_pubkey_import_x509_crq... ok
+Creating documentation for gnutls_pubkey_import_x509_raw... ok
+Creating documentation for gnutls_pubkey_init... ok
+Creating documentation for gnutls_pubkey_print... ok
+Creating documentation for gnutls_pubkey_set_key_usage... ok
+Creating documentation for gnutls_pubkey_set_pin_function... ok
+Creating documentation for gnutls_pubkey_set_spki... ok
+Creating documentation for gnutls_pubkey_verify_data2... ok
+Creating documentation for gnutls_pubkey_verify_hash2... ok
+Creating documentation for gnutls_pubkey_verify_params... ok
+Creating documentation for gnutls_register_custom_url... ok
+Creating documentation for gnutls_system_key_add_x509... ok
+Creating documentation for gnutls_system_key_delete... ok
+Creating documentation for gnutls_system_key_iter_deinit... ok
+Creating documentation for gnutls_system_key_iter_get_info... ok
+Creating documentation for gnutls_x509_crl_privkey_sign... ok
+Creating documentation for gnutls_x509_crq_privkey_sign... ok
+Creating documentation for gnutls_x509_crq_set_pubkey... ok
+Creating documentation for gnutls_x509_crt_privkey_sign... ok
+Creating documentation for gnutls_x509_crt_set_pubkey... ok
+rm -f abstract-api.texi-headers-tmp
+mv -f abstract-api.texi-tmp abstract-api.texi
+echo "" > compat-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/compat.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> compat-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_compression_get... ok
+Creating documentation for gnutls_compression_get_id... ok
+Creating documentation for gnutls_compression_get_name... ok
+Creating documentation for gnutls_compression_list... ok
+Creating documentation for gnutls_global_set_mem_functions... ok
+Creating documentation for gnutls_openpgp_privkey_sign_hash... ok
+Creating documentation for gnutls_priority_compression_list... ok
+Creating documentation for gnutls_x509_crt_get_preferred_hash_algorithm... ok
+Creating documentation for gnutls_x509_privkey_sign_hash... ok
+mv -f compat-api.texi-tmp compat-api.texi
+echo "" > dtls-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/dtls.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> dtls-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_dtls_cookie_send... ok
+Creating documentation for gnutls_dtls_cookie_verify... ok
+Creating documentation for gnutls_dtls_get_data_mtu... ok
+Creating documentation for gnutls_dtls_get_mtu... ok
+Creating documentation for gnutls_dtls_get_timeout... ok
+Creating documentation for gnutls_dtls_prestate_set... ok
+Creating documentation for gnutls_dtls_set_data_mtu... ok
+Creating documentation for gnutls_dtls_set_mtu... ok
+Creating documentation for gnutls_dtls_set_timeouts... ok
+Creating documentation for gnutls_record_get_discarded... ok
+mv -f dtls-api.texi-tmp dtls-api.texi
+echo "" > crypto-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/crypto.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> crypto-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_aead_cipher_decrypt... ok
+Creating documentation for gnutls_aead_cipher_decryptv2... ok
+Creating documentation for gnutls_aead_cipher_deinit... ok
+Creating documentation for gnutls_aead_cipher_encrypt... ok
+Creating documentation for gnutls_aead_cipher_encryptv... ok
+Creating documentation for gnutls_aead_cipher_encryptv2... ok
+Creating documentation for gnutls_aead_cipher_init... ok
+Creating documentation for gnutls_cipher_add_auth... ok
+Creating documentation for gnutls_cipher_decrypt... ok
+Creating documentation for gnutls_cipher_decrypt2... ok
+Creating documentation for gnutls_cipher_deinit... ok
+Creating documentation for gnutls_cipher_encrypt... ok
+Creating documentation for gnutls_cipher_encrypt2... ok
+Creating documentation for gnutls_cipher_get_block_size... ok
+Creating documentation for gnutls_cipher_get_iv_size... ok
+Creating documentation for gnutls_cipher_get_tag_size... ok
+Creating documentation for gnutls_cipher_init... ok
+Creating documentation for gnutls_cipher_set_iv... ok
+Creating documentation for gnutls_cipher_tag... ok
+Creating documentation for gnutls_crypto_register_aead_cipher... ok
+Creating documentation for gnutls_crypto_register_cipher... ok
+Creating documentation for gnutls_crypto_register_digest... ok
+Creating documentation for gnutls_crypto_register_mac... ok
+Creating documentation for gnutls_decode_ber_digest_info... ok
+Creating documentation for gnutls_decode_gost_rs_value... ok
+Creating documentation for gnutls_decode_rs_value... ok
+Creating documentation for gnutls_encode_ber_digest_info... ok
+Creating documentation for gnutls_encode_gost_rs_value... ok
+Creating documentation for gnutls_encode_rs_value... ok
+Creating documentation for gnutls_hash... ok
+Creating documentation for gnutls_hash_copy... ok
+Creating documentation for gnutls_hash_deinit... ok
+Creating documentation for gnutls_hash_fast... ok
+Creating documentation for gnutls_hash_get_len... ok
+Creating documentation for gnutls_hash_init... ok
+Creating documentation for gnutls_hash_output... ok
+Creating documentation for gnutls_hkdf_expand... ok
+Creating documentation for gnutls_hkdf_extract... ok
+Creating documentation for gnutls_hmac... ok
+Creating documentation for gnutls_hmac_copy... ok
+Creating documentation for gnutls_hmac_deinit... ok
+Creating documentation for gnutls_hmac_fast... ok
+Creating documentation for gnutls_hmac_get_key_size... ok
+Creating documentation for gnutls_hmac_get_len... ok
+Creating documentation for gnutls_hmac_init... ok
+Creating documentation for gnutls_hmac_output... ok
+Creating documentation for gnutls_hmac_set_nonce... ok
+Creating documentation for gnutls_mac_get_nonce_size... ok
+Creating documentation for gnutls_pbkdf2... ok
+Creating documentation for gnutls_rnd... ok
+Creating documentation for gnutls_rnd_refresh... ok
+mv -f crypto-api.texi-tmp crypto-api.texi
+echo "" > ocsp-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/ocsp.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/x509/*.c ../lib/*.c ../lib/system/certs.c >> ocsp-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_ocsp_req_add_cert... ok
+Creating documentation for gnutls_ocsp_req_add_cert_id... ok
+Creating documentation for gnutls_ocsp_req_deinit... ok
+Creating documentation for gnutls_ocsp_req_export... ok
+Creating documentation for gnutls_ocsp_req_get_cert_id... ok
+Creating documentation for gnutls_ocsp_req_get_extension... ok
+Creating documentation for gnutls_ocsp_req_get_nonce... ok
+Creating documentation for gnutls_ocsp_req_get_version... ok
+Creating documentation for gnutls_ocsp_req_import... ok
+Creating documentation for gnutls_ocsp_req_init... ok
+Creating documentation for gnutls_ocsp_req_print... ok
+Creating documentation for gnutls_ocsp_req_randomize_nonce... ok
+Creating documentation for gnutls_ocsp_req_set_extension... ok
+Creating documentation for gnutls_ocsp_req_set_nonce... ok
+Creating documentation for gnutls_ocsp_resp_check_crt... ok
+Creating documentation for gnutls_ocsp_resp_deinit... ok
+Creating documentation for gnutls_ocsp_resp_export... ok
+Creating documentation for gnutls_ocsp_resp_export2... ok
+Creating documentation for gnutls_ocsp_resp_get_certs... ok
+Creating documentation for gnutls_ocsp_resp_get_extension... ok
+Creating documentation for gnutls_ocsp_resp_get_nonce... ok
+Creating documentation for gnutls_ocsp_resp_get_produced... ok
+Creating documentation for gnutls_ocsp_resp_get_responder... ok
+Creating documentation for gnutls_ocsp_resp_get_responder2... ok
+Creating documentation for gnutls_ocsp_resp_get_responder_raw_id... ok
+Creating documentation for gnutls_ocsp_resp_get_response... ok
+Creating documentation for gnutls_ocsp_resp_get_signature... ok
+Creating documentation for gnutls_ocsp_resp_get_signature_algorithm... ok
+Creating documentation for gnutls_ocsp_resp_get_single... ok
+Creating documentation for gnutls_ocsp_resp_get_status... ok
+Creating documentation for gnutls_ocsp_resp_get_version... ok
+Creating documentation for gnutls_ocsp_resp_import... ok
+Creating documentation for gnutls_ocsp_resp_import2... ok
+Creating documentation for gnutls_ocsp_resp_init... ok
+Creating documentation for gnutls_ocsp_resp_list_import2... ok
+Creating documentation for gnutls_ocsp_resp_print... ok
+Creating documentation for gnutls_ocsp_resp_verify... ok
+Creating documentation for gnutls_ocsp_resp_verify_direct... ok
+mv -f ocsp-api.texi-tmp ocsp-api.texi
+echo "" > dane-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../libdane/includes/gnutls/dane.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/*/*.c ../lib/*.c ../libdane/*.c >> dane-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for dane_cert_type_name... ok
+Creating documentation for dane_cert_usage_name... ok
+Creating documentation for dane_match_type_name... ok
+Creating documentation for dane_query_data... ok
+Creating documentation for dane_query_deinit... ok
+Creating documentation for dane_query_entries... ok
+Creating documentation for dane_query_status... ok
+Creating documentation for dane_query_tlsa... ok
+Creating documentation for dane_query_to_raw_tlsa... ok
+Creating documentation for dane_raw_tlsa... ok
+Creating documentation for dane_state_deinit... ok
+Creating documentation for dane_state_init... ok
+Creating documentation for dane_state_set_dlv_file... ok
+Creating documentation for dane_strerror... ok
+Creating documentation for dane_verification_status_print... ok
+Creating documentation for dane_verify_crt... ok
+Creating documentation for dane_verify_crt_raw... ok
+Creating documentation for dane_verify_session_crt... ok
+mv -f dane-api.texi-tmp dane-api.texi
+echo "" > pkcs7-api.texi-tmp
+for i in `../doc/scripts/getfuncs.pl < ../lib/includes/gnutls/pkcs7.h |sort|uniq`; do \
+	echo -n "Creating documentation for $i... " && \
+	./scripts/gdoc -texinfo \
+		-function $i \
+		../lib/x509/*.c ../lib/*.c ../lib/system/certs.c >> pkcs7-api.texi-tmp && \
+	echo "ok"; \
+done
+Creating documentation for gnutls_pkcs7_add_attr... ok
+Creating documentation for gnutls_pkcs7_attrs_deinit... ok
+Creating documentation for gnutls_pkcs7_deinit... ok
+Creating documentation for gnutls_pkcs7_delete_crl... ok
+Creating documentation for gnutls_pkcs7_delete_crt... ok
+Creating documentation for gnutls_pkcs7_export... ok
+Creating documentation for gnutls_pkcs7_export2... ok
+Creating documentation for gnutls_pkcs7_get_attr... ok
+Creating documentation for gnutls_pkcs7_get_crl_count... ok
+Creating documentation for gnutls_pkcs7_get_crl_raw... ok
+Creating documentation for gnutls_pkcs7_get_crl_raw2... ok
+Creating documentation for gnutls_pkcs7_get_crt_count... ok
+Creating documentation for gnutls_pkcs7_get_crt_raw... ok
+Creating documentation for gnutls_pkcs7_get_crt_raw2... ok
+Creating documentation for gnutls_pkcs7_get_embedded_data... ok
+Creating documentation for gnutls_pkcs7_get_embedded_data_oid... ok
+Creating documentation for gnutls_pkcs7_get_signature_count... ok
+Creating documentation for gnutls_pkcs7_get_signature_info... ok
+Creating documentation for gnutls_pkcs7_import... ok
+Creating documentation for gnutls_pkcs7_init... ok
+Creating documentation for gnutls_pkcs7_print... ok
+Creating documentation for gnutls_pkcs7_print_signature_info... ok
+Creating documentation for gnutls_pkcs7_set_crl... ok
+Creating documentation for gnutls_pkcs7_set_crl_raw... ok
+Creating documentation for gnutls_pkcs7_set_crt... ok
+Creating documentation for gnutls_pkcs7_set_crt_raw... ok
+Creating documentation for gnutls_pkcs7_sign... ok
+Creating documentation for gnutls_pkcs7_signature_info_deinit... ok
+Creating documentation for gnutls_pkcs7_verify... ok
+Creating documentation for gnutls_pkcs7_verify_direct... ok
+mv -f pkcs7-api.texi-tmp pkcs7-api.texi
+mkdir functions
+rm -f functions/*.short
+for i in gnutls-api.texi socket-api.texi x509-api.texi pkcs12-api.texi tpm-api.texi pkcs11-api.texi abstract-api.texi compat-api.texi dtls-api.texi crypto-api.texi ocsp-api.texi dane-api.texi pkcs7-api.texi; do \
+	./scripts/split-texi.pl functions < $i; \
+done
+/bin/sed -i 's/\@anchor{.*//g' functions/*
+/bin/sed -i 's/\@subheading.*//g' functions/*
+cd functions && for i in *;do grep ^"@deftypefun" $i | /bin/sed 's/@deftypefun/@item/g;s/ {/ @var{/;s/ {/ @ref{/' > ../functions/$i.short;done
+echo stamp_functions > stamp_functions
+mkdir enums
+./scripts/split-texi.pl enums enum < enums.texi
+echo stamp_enums > stamp_enums
+  MAKEINFO gnutls.info
+./cha-gtls-app.texi:1426: warning: @ref node name should not contain `.'
+./cha-gtls-app.texi:1631: warning: @ref node name should not contain `.'
+make[4]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc'
+make[3]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls/doc'
+make[2]: Entering directory '/root/third_party/gnutls/new/gnutls'
+make[2]: Leaving directory '/root/third_party/gnutls/new/gnutls'
+make[1]: Leaving directory '/root/third_party/gnutls/new/gnutls'
