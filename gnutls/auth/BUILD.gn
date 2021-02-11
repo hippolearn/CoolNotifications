@@ -1,0 +1,35 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("auth_config") {
+  include_dirs = [
+    "//third_party/gnutls/auth",
+  ]
+}
+
+gl_sources = [
+  "//third_party/gnutls/auth/anon.c",
+  "//third_party/gnutls/auth/anon_ecdh.c",
+  "//third_party/gnutls/auth/cert.c",
+  "//third_party/gnutls/auth/dh_common.c",
+  "//third_party/gnutls/auth/dhe.c",
+  "//third_party/gnutls/auth/dhe_psk.c",
+  "//third_party/gnutls/auth/ecdhe.c",
+  "//third_party/gnutls/auth/psk.c",
+  "//third_party/gnutls/auth/psk_passwd.c",
+  "//third_party/gnutls/auth/rsa.c",
+  "//third_party/gnutls/auth/rsa_psk.c",
+  "//third_party/gnutls/auth/srp_kx.c",
+  "//third_party/gnutls/auth/srp_passwd.c",
+  "//third_party/gnutls/auth/srp_rsa.c",
+  "//third_party/gnutls/auth/srp_sb64.c",
+  "//third_party/gnutls/auth/vko_gost.c",
+]
+
+lite_library("auth") {
+  target_type = "shared_library"
+  sources = auth_sources
+
+  public_configs = [
+    ":auth_config",
+  ]
+}
