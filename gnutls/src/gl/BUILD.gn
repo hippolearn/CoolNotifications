@@ -1,0 +1,56 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("src_gl_config") {
+  include_dirs = [
+    "//third_party/gnutls/src/gl",
+  ]
+}
+
+src_gl_sources = [
+  "//third_party/gnutls/src/gl/basename-lgpl.c",
+  "//third_party/gnutls/src/gl/bitrotate.c",
+  "//third_party/gnutls/src/gl/c-ctype.c",
+  "//third_party/gnutls/src/gl/c-strcasecmp.c",
+  "//third_party/gnutls/src/gl/c-strncasecmp.c",
+  "//third_party/gnutls/src/gl/cloexec.c",
+  "//third_party/gnutls/src/gl/close-stream.c",
+  "//third_party/gnutls/src/gl/exitfail.c",
+  "//third_party/gnutls/src/gl/fd-hook.c",
+  "//third_party/gnutls/src/gl/getprogname.c",
+  "//third_party/gnutls/src/gl/gettime.c",
+  "//third_party/gnutls/src/gl/hash.c",
+  "//third_party/gnutls/src/gl/hash-pjw-bare.c",
+  "//third_party/gnutls/src/gl/gl_linked_list.c",
+  "//third_party/gnutls/src/gl/gl_list.c",
+  "//third_party/gnutls/src/gl/malloca.c",
+  "//third_party/gnutls/src/gl/nstrftime.c",
+  "//third_party/gnutls/src/gl/parse-datetime.c",
+  "//third_party/gnutls/src/gl/progname.c",
+  "//third_party/gnutls/src/gl/read-file.c",
+  "//third_party/gnutls/src/gl/sockets.c",
+  "//third_party/gnutls/src/gl/stat-time.c",
+  "//third_party/gnutls/src/gl/sys_socket.c",
+  "//third_party/gnutls/src/gl/glthread/threadlib.c",
+  "//third_party/gnutls/src/gl/timespec.c",
+  "//third_party/gnutls/src/gl/unistd.c",
+  "//third_party/gnutls/src/gl/xmalloc.c",
+  "//third_party/gnutls/src/gl/xalloc-die.c",
+  "//third_party/gnutls/src/gl/gl_xlist.c",
+  "//third_party/gnutls/src/gl/xsize.c",
+  "//third_party/gnutls/src/gl/asnprintf.c",
+  "//third_party/gnutls/src/gl/fcntl.c",
+  "//third_party/gnutls/src/gl/mktime.c",
+  "//third_party/gnutls/src/gl/printf-args.c",
+  "//third_party/gnutls/src/gl/printf-parse.c",
+  "//third_party/gnutls/src/gl/time_rz.c",
+  "//third_party/gnutls/src/gl/vasnprintf.c",
+]
+
+lite_library("src_gl") {
+  target_type = "shared_library"
+  sources = src_gl_sources
+
+  public_configs = [
+    ":src_gl_config",
+  ]
+}
