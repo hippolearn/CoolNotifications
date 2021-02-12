@@ -1,0 +1,51 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("nettle_config") {
+  include_dirs = [
+    "//third_party/gnutls/lib/nettle",
+    "//third_party/gnutls/lib/nettle/int",
+    "//third_party/gnutls/lib/nettle/gost",
+  ]
+}
+
+nettle_sources = [
+  "//third_party/gnutls/lib/nettle/pk.c",
+  "//third_party/gnutls/lib/nettle/mpi.c",
+  "//third_party/gnutls/lib/nettle/mac.c",
+  "//third_party/gnutls/lib/nettle/cipher.c",
+  "//third_party/gnutls/lib/nettle/init.c",
+  "//third_party/gnutls/lib/nettle/prf.c",
+  "//third_party/gnutls/lib/nettle/rnd.c",
+  "//third_party/gnutls/lib/nettle/int/rsa-keygen-fips186.c",
+  "//third_party/gnutls/lib/nettle/int/provable-prime.c",
+  "//third_party/gnutls/lib/nettle/int/dsa-keygen-fips186.c",
+  "//third_party/gnutls/lib/nettle/int/dsa-validate.c",
+  "//third_party/gnutls/lib/nettle/int/tls1-prf.c",
+  "//third_party/gnutls/lib/nettle/int/dsa-compute-k.c",
+  "//third_party/gnutls/lib/nettle/int/ecdsa-compute-k.c",
+  "//third_party/gnutls/lib/nettle/int/mpn-base256.c",
+  "//third_party/gnutls/lib/nettle/sysrng-linux.c rnd-fuzzer.c",
+  "//third_party/gnutls/lib/nettle/gost/write-le32.c",
+  "//third_party/gnutls/lib/nettle/gost/gost28147.c",
+  "//third_party/gnutls/lib/nettle/gost/gost-wrap.c",
+  "//third_party/gnutls/lib/nettle/gost/streebog.c",
+  "//third_party/gnutls/lib/nettle/gost/streebog-meta.c",
+  "//third_party/gnutls/lib/nettle/gost/hmac-streebog.c",
+  "//third_party/gnutls/lib/nettle/gost/bignum-le.c",
+  "//third_party/gnutls/lib/nettle/gost/gostdsa-mask.c",
+  "//third_party/gnutls/lib/nettle/gost_keywrap.c",
+  "//third_party/gnutls/lib/nettle/gost/magma.c",
+  "//third_party/gnutls/lib/nettle/gost/kuznyechik.c",
+  "//third_party/gnutls/lib/nettle/gost/acpkm.c",
+  "//third_party/gnutls/lib/nettle/gost/cmac-magma.c",
+  "//third_party/gnutls/lib/nettle/gost/cmac-kuznyechik.c",
+]
+
+lite_library("nettle") {
+  target_type = "shared_library"
+  sources = nettle_sources
+
+  public_configs = [
+    ":nettle_config",
+  ]
+}
