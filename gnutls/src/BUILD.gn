@@ -1,0 +1,56 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("src_config") {
+  include_dirs = [
+    "//third_party/gnutls/src",
+  ]
+}
+
+src_sources = [
+  "//third_party/gnutls/src/srptool-args.c",
+  "//third_party/gnutls/src/psktool-args.c",
+  "//third_party/gnutls/src/ocsptool-args.c",
+  "//third_party/gnutls/src/serv-args.c",
+  "//third_party/gnutls/src/cli-args.c",
+  "//third_party/gnutls/src/cli-debug-args.c",
+  "//third_party/gnutls/src/certtool-cfg.c",
+  "//third_party/gnutls/src/certtool-args.c",
+  "//third_party/gnutls/src/danetool-args.c",
+  "//third_party/gnutls/src/p11tool-args.c",
+  "//third_party/gnutls/src/tpmtool-args.c",
+  "//third_party/gnutls/src/systemkey-args.c",
+  "//third_party/gnutls/src/psk.c",
+  "//third_party/gnutls/src/cli-debug.c",
+  "//third_party/gnutls/src/tests.c",
+  "//third_party/gnutls/src/socket.c",
+  "//third_party/gnutls/src/common.c",
+  "//third_party/gnutls/src/certtool.c",
+  "//third_party/gnutls/src/certtool-common.c",
+  "//third_party/gnutls/src/certtool-extras.c",
+  "//third_party/gnutls/src/serv.c",
+  "//third_party/gnutls/src/udp-serv.c",
+  "//third_party/gnutls/src/cli.c",
+  "//third_party/gnutls/src/benchmark-cipher.c",
+  "//third_party/gnutls/src/benchmark.c",
+  "//third_party/gnutls/src/benchmark-tls.c",
+  "//third_party/gnutls/src/ocsptool-common.c",
+  "//third_party/gnutls/src/srptool.c",
+  "//third_party/gnutls/src/ocsptool.c",
+  "//third_party/gnutls/src/danetool.c",
+  "//third_party/gnutls/src/tpmtool.c",
+  "//third_party/gnutls/src/p11tool-p11tool.c",
+  "//third_party/gnutls/src/p11tool-pkcs11.c",
+  "//third_party/gnutls/src/p11tool-certtool-common.c",
+  "//third_party/gnutls/src/p11tool-certtool-extras.c",
+  "//third_party/gnutls/src/p11tool-common.c",
+  "//third_party/gnutls/src/systemkey.c",
+]
+
+lite_library("src") {
+  target_type = "shared_library"
+  sources = src_sources
+
+  public_configs = [
+    ":src_config",
+  ]
+}
