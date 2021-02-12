@@ -1,0 +1,28 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("extras_config") {
+  include_dirs = [
+    "//third_party/gnutls/lib/extras",
+    "//third_party/gnutls/lib",
+    "//third_party/gnutls/lib/minitasn1",
+    "//third_party/gnutls/devel",
+    "//third_party/gnutls/lib/includes",
+    "//third_party/gnutls/gl",
+    "//third_party/gnutls",
+  ]
+}
+
+extras_sources = [
+  "//third_party/gnutls/lib/extras/hex.c",
+  "//third_party/gnutls/lib/extras/randomart.c",
+]
+
+lite_library("extras") {
+  target_type = "static_library"
+  sources = extras_sources
+
+  public_configs = [
+    ":extras_config",
+  ]
+}
+
