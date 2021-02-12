@@ -1,0 +1,30 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("algorithms_config") {
+  include_dirs = [
+    "//third_party/gnutls/lib/algorithms",
+  ]
+}
+
+algorithms_sources = [
+  "//third_party/gnutls/lib/algorithms/cert_types.c",
+  "//third_party/gnutls/lib/algorithms/ciphers.c",
+  "//third_party/gnutls/lib/algorithms/ciphersuites.c",
+  "//third_party/gnutls/lib/algorithms/ecc.c",
+  "//third_party/gnutls/lib/algorithms/kx.c",
+  "//third_party/gnutls/lib/algorithms/mac.c",
+  "//third_party/gnutls/lib/algorithms/protocols.c",
+  "//third_party/gnutls/lib/algorithms/publickey.c",
+  "//third_party/gnutls/lib/algorithms/secparams.c",
+  "//third_party/gnutls/lib/algorithms/sign.c",
+  "//third_party/gnutls/lib/algorithms/groups.c",
+]
+
+lite_library("algorithms") {
+  target_type = "shared_library"
+  sources = algorithms_sources
+
+  public_configs = [
+    ":algorithms_config",
+  ]
+}
