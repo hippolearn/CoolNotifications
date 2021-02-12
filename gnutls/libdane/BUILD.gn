@@ -1,0 +1,22 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("libdane_config") {
+  include_dirs = [
+    "//third_party/gnutls/libdane/includes",
+  ]
+}
+
+accelerated_sources = [
+  "//third_party/gnutls/libdane/dane.c",
+  "//third_party/gnutls/libdane/dane-params.c",
+  "//third_party/gnutls/libdane/errors.c",
+]
+
+lite_library("libdane") {
+  target_type = "shared_library"
+  sources = libdane_sources
+
+  public_configs = [
+    ":libdane_config",
+  ]
+}
