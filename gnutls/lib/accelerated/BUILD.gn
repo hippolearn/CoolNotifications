@@ -1,0 +1,24 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("accelerated_config") {
+  include_dirs = [
+    "//third_party/gnutls/lib/accelerated",
+    "//third_party/gnutls/lib/accelerated/x86",
+    "//third_party/gnutls/lib/accelerated/aarch64",
+  ]
+}
+
+accelerated_sources = [
+  "//third_party/gnutls/lib/accelerated/accelerated.c",
+  "//third_party/gnutls/lib/accelerated/cryptodev-gcm.c",
+  "//third_party/gnutls/lib/accelerated/cryptodev.c",
+]
+
+lite_library("accelerated") {
+  target_type = "shared_library"
+  sources = accelerated_sources
+
+  public_configs = [
+    ":accelerated_config",
+  ]
+}

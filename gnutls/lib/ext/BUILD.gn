@@ -1,0 +1,44 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("ext_config") {
+  include_dirs = [
+    "//third_party/gnutls/lib/ext",
+  ]
+}
+
+ext_sources = [
+  "//third_party/gnutls/lib/extmax_record.c",
+  "//third_party/gnutls/lib/ext/server_name.c",
+  "//third_party/gnutls/lib/ext/signature.c",
+  "//third_party/gnutls/lib/ext/safe_renegotiation.c",
+  "//third_party/gnutls/lib/ext/session_ticket.c",
+  "//third_party/gnutls/lib/ext/srp.c",
+  "//third_party/gnutls/lib/ext/heartbeat.c",
+  "//third_party/gnutls/lib/ext/status_request.c",
+  "//third_party/gnutls/lib/ext/dumbfw.c",
+  "//third_party/gnutls/lib/ext/ext_master_secret.c",
+  "//third_party/gnutls/lib/ext/etm.c",
+  "//third_party/gnutls/lib/ext/supported_versions.c",
+  "//third_party/gnutls/lib/ext/post_handshake.c",
+  "//third_party/gnutls/lib/ext/key_share.c",
+  "//third_party/gnutls/lib/ext/cookie.c",
+  "//third_party/gnutls/lib/ext/psk_ke_modes.c",
+  "//third_party/gnutls/lib/ext/pre_shared_key.c",
+  "//third_party/gnutls/lib/ext/supported_groups.c",
+  "//third_party/gnutls/lib/ext/ec_point_formats.c",
+  "//third_party/gnutls/lib/ext/early_data.c",
+  "//third_party/gnutls/lib/ext/record_size_limit.c",
+  "//third_party/gnutls/lib/ext/client_cert_type.c",
+  "//third_party/gnutls/lib/ext/server_cert_type.c",
+  "//third_party/gnutls/lib/ext/alpn.c",
+  "//third_party/gnutls/lib/ext/srtp.c",
+]
+
+lite_library("ext") {
+  target_type = "shared_library"
+  sources = ext_sources
+
+  public_configs = [
+    ":ext_config",
+  ]
+}

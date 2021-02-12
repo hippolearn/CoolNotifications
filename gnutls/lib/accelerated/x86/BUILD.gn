@@ -1,0 +1,42 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("x86_config") {
+  include_dirs = [
+    "//third_party/gnutls/accelerated/x86",
+  ]
+}
+
+x86_sources = [
+  "//third_party/gnutls/accelerated/x86/x86-common.c",
+  "//third_party/gnutls/accelerated/x86/sha-x86-5sse3.c",
+  "//third_party/gnutls/accelerated/x86/hmac-x86-ssse3.c",
+  "//third_party/gnutls/accelerated/x86/aes-gcm-x86-ssse3.c",
+  "//third_party/gnutls/accelerated/x86/aes-gcm-x86-aesni.c",
+  "//third_party/gnutls/accelerated/x86/aes-cbc-x86-ssse3.c",
+  "//third_party/gnutls/accelerated/x86/aes-cbc-x86-aesni.c",
+  "//third_party/gnutls/accelerated/x86/aes-ccm-x86-aesni.c",
+  "//third_party/gnutls/accelerated/x86/aes-xts-x86-aesni.c",
+  "//third_party/gnutls/accelerated/x86/sha-padlock.c",
+  "//third_party/gnutls/accelerated/x86/hmac-padlock.c",
+  "//third_party/gnutls/accelerated/x86/aes-padlock.c",
+  "//third_party/gnutls/accelerated/x86/aes-gcm-padlock.c",
+  "//third_party/gnutls/accelerated/x86/elf/aesni-x86_64.c",
+  "//third_party/gnutls/accelerated/x86/elf/e_padlock-x86_64.c",
+  "//third_party/gnutls/accelerated/x86/aes-gcm-x86-pclmul.c",
+  "//third_party/gnutls/accelerated/x86/aes-gcm-x86-pclmul-avx.c",
+  "//third_party/gnutls/accelerated/x86/elf/ghash-x86_64.c",
+  "//third_party/gnutls/accelerated/x86/elf/shal-ssse3-x86_64. lo",
+  "//third_party/gnutls/accelerated/x86/elf/sha512-ssse3-x86 64.c",
+  "//third_party/gnutls/accelerated/x86/elf/aes-ssse3-x86 64.c",
+  "//third_party/gnutls/accelerated/x86/elf/aesni-gcm-x86_64.10",
+  "//third_party/gnutls/accelerated/x86/elf/sha256-ssse3-x86_64.c",
+]
+
+lite_library("x86") {
+  target_type = "shared_library"
+  sources = x86_sources
+
+  public_configs = [
+    ":x86_config",
+  ]
+}

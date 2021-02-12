@@ -1,0 +1,70 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("x509_config") {
+  include_dirs = [
+    "//third_party/gnutls/lib/x509",
+  ]
+}
+
+x509_sources = [
+  "//third_party/gnutls/lib/x509/attributes.c",
+  "//third_party/gnutls/lib/x509/common.c",
+  "//third_party/gnutls/lib/x509/crl_write.c",",
+  "//third_party/gnutls/lib/x509/crq.c",
+  "//third_party/gnutls/lib/x509/dn.c",
+  "//third_party/gnutls/lib/x509/email-verify.c",
+  "//third_party/gnutls/lib/x509/email-verify.c",
+  "//third_party/gnutls/lib/x509/extensions.c",
+  "//third_party/gnutls/lib/x509/hostname-verify.c",
+  "//third_party/gnutls/lib/x509/ip.c",
+  "//third_party/gnutls/lib/x509/key_decode.c",
+  "//third_party/gnutls/lib/x509/time.c",
+  "//third_party/gnutls/lib/x509/crl.c",
+  "//third_party/gnutls/lib/x509/key_encode.c",
+  "//third_party/gnutls/lib/x509/krb5.c",
+  "//third_party/gnutls/lib/x509/mpi.c",
+  "//third_party/gnutls/lib/x509/name constraints.c",
+  "//third_party/gnutls/lib/x509/name_constraints.c",
+  "//third_party/gnutls/lib/x509/ocsp.c",
+  "//third_party/gnutls/lib/x509/ocsp_output.c",
+  "//third_party/gnutls/lib/x509/output.c",
+  "//third_party/gnutls/lib/x509/pkcs12.c",
+  "//third_party/gnutls/lib/x509/pkcs12_bag.c",
+  "//third_party/gnutls/lib/x509/pkcs12_encr.c",
+  "//third_party/gnutls/lib/x509/pkcs7-attrs.c",
+  "//third_party/gnutls/lib/x509/pkcs7-crypt.c",
+  "//third_party/gnutls/lib/x509/pkcs7-output.c",
+  "//third_party/gnutls/lib/x509/pkcs7.c",
+  "//third_party/gnutls/lib/x509/privkey.c",
+  "//third_party/gnutls/lib/x509/privkey_openssl.c",
+  "//third_party/gnutls/lib/x509/privkey_pkcs8.c",
+  "//third_party/gnutls/lib/x509/privkey_pkcs8_pbes1.c",
+  "//third_party/gnutls/lib/x509/prov-seed.c",
+  "//third_party/gnutls/lib/x509/sign.c",
+  "//third_party/gnutls/lib/x509/spki.c",
+  "//third_party/gnutls/lib/x509/tls_features.c",
+  "//third_party/gnutls/lib/x509/verify-high.c",
+  "//third_party/gnutls/lib/x509/verify-high.c",
+  "//third_party/gnutls/lib/x509/verify-high2.c",
+  "//third_party/gnutls/lib/x509/verify-high2.c",
+  "//third_party/gnutls/lib/x509/verify.c",
+  "//third_party/gnutls/lib/x509/verify.c",
+  "//third_party/gnutls/lib/x509/virt-san.c",
+  "//third_party/gnutls/lib/x509/x509.c",
+  "//third_party/gnutls/lib/x509/x509.c",
+  "//third_party/gnutls/lib/x509/x509_dn.c",
+  "//third_party/gnutls/lib/x509/x509_dn.c",
+  "//third_party/gnutls/lib/x509/x509_ext.c",
+  "//third_party/gnutls/lib/x509/x509_ext.c",
+  "//third_party/gnutls/lib/x509/x509_write.c",
+  "//third_party/gnutls/lib/x509/x509_write.c",
+]
+
+lite_library("x509") {
+  target_type = "shared_library"
+  sources = x509_sources
+
+  public_configs = [
+    ":x509_config",
+  ]
+}
