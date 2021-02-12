@@ -1,0 +1,22 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("guile_src_config") {
+  include_dirs = [
+    "//third_party/gnutls/guile/src",
+  ]
+}
+
+guile_src_sources = [
+  "//third_party/gnutls/guile/src/guile_gnutls_v_2_la-core.c",
+  "//third_party/gnutls/guile/src/guile_gnutls_v_2_la-errors.c",
+  "//third_party/gnutls/guile/src/guile_gnutls_v_2_la-utils.c",
+]
+
+lite_library("guile_src") {
+  target_type = "shared_library"
+  sources = guile_src_sources
+
+  public_configs = [
+    ":guile_src_config",
+  ]
+}
