@@ -1,0 +1,36 @@
+import("//build/lite/config/component/lite_component.gni")
+
+config("gnutls_config") {
+  include_dirs = [
+    "//third_party/gnutls/src/",
+  ]
+}
+
+gnutls_sources = [
+  #"//third_party/gnutls/lib/handshake.c",
+]
+
+lite_library("gnutls") {
+  target_type = "shared_library"
+  sources = gnutls_sources
+
+  public_configs = [
+    ":gnutls_config",
+  ]
+  
+  deps = [
+    "//third_party/gnutls/gl:gl",
+    "//third_party/gnutls/lib/x509:x509",
+    "//third_party/gnutls/lib/auth:auth",
+    "//third_party/gnutls/lib/ext:ext",
+    "//third_party/gnutls/lib/algorithms:algorithms",
+    "//third_party/gnutls/lib/extras:extras",
+    "//third_party/gnutls/lib/accelerated:accelerated",
+    "//third_party/gnutls/lib/unistring:unistring",
+    "//third_party/gnutls/lib/nettle:nettle",
+    "//third_party/gnutls/lib:lib",
+    "//third_party/gnutls/libdane:libdane",
+    "//third_party/gnutls/src/gl:src_gl",
+    "//third_party/gnutls/src/guile/src:guile_src",
+  ]
+}
