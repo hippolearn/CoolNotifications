@@ -3,52 +3,269 @@ import("//build/lite/config/component/lite_component.gni")
 config("src_config") {
   include_dirs = [
     "//third_party/gnutls/src",
+    "//third_party/gnutls/src",
+    "//third_party/gnutls/lib/includes",
+    "//third_party/gnutls/src/libopts",
+    "//third_party/gnutls/src/gl",
+    "//third_party/gnutls/lib/minitasn1",
+    "//third_party/gnutls/includes",
   ]
 }
 
-src_sources = [
-  "//third_party/gnutls/src/srptool-args.c",
+src_libcmd_srp = [
+  "//third_party/gnutls/src/srptool-args.c",]
+  
+src_libcmd_ocsp = [
   "//third_party/gnutls/src/psktool-args.c",
-  "//third_party/gnutls/src/ocsptool-args.c",
-  "//third_party/gnutls/src/serv-args.c",
-  "//third_party/gnutls/src/cli-args.c",
-  "//third_party/gnutls/src/cli-debug-args.c",
+  "//third_party/gnutls/src/ocsptool-args.c",]
+  
+src_libcmd_serv = [
+  "//third_party/gnutls/src/serv-args.c",]
+
+src_libcmd_cli = [
+  "//third_party/gnutls/src/cli-args.c",]
+  
+src_libcmd_cli_debug = [
+  "//third_party/gnutls/src/cli-debug-args.c",]
+  
+src_libcmd_certtool = [
   "//third_party/gnutls/src/certtool-cfg.c",
-  "//third_party/gnutls/src/certtool-args.c",
-  "//third_party/gnutls/src/danetool-args.c",
-  "//third_party/gnutls/src/p11tool-args.c",
-  "//third_party/gnutls/src/tpmtool-args.c",
-  "//third_party/gnutls/src/systemkey-args.c",
-  "//third_party/gnutls/src/psk.c",
+  "//third_party/gnutls/src/certtool-args.c",]
+  
+src_libcmd_danetool = [
+  "//third_party/gnutls/src/danetool-args.c",]
+  
+src_libcmd_p11tool = [
+  "//third_party/gnutls/src/p11tool-args.c",]
+  
+src_libcmd_tpmtool = [
+  "//third_party/gnutls/src/tpmtool-args.c",]
+
+src_libcmd_systemkey = [
+  "//third_party/gnutls/src/systemkey-args.c",]
+  
+src_psktool = [
+  "//third_party/gnutls/src/psk.c",]
+  
+src_gnutls_cli_debug = [
   "//third_party/gnutls/src/cli-debug.c",
   "//third_party/gnutls/src/tests.c",
   "//third_party/gnutls/src/socket.c",
-  "//third_party/gnutls/src/common.c",
+  "//third_party/gnutls/src/common.c",]
+  
+src_certtool = [
   "//third_party/gnutls/src/certtool.c",
   "//third_party/gnutls/src/certtool-common.c",
-  "//third_party/gnutls/src/certtool-extras.c",
+  "//third_party/gnutls/src/certtool-extras.c",]
+  
+src_gnutls_serv = [
   "//third_party/gnutls/src/serv.c",
-  "//third_party/gnutls/src/udp-serv.c",
+  "//third_party/gnutls/src/udp-serv.c",]
+  
+src_gnutls_cli = [
   "//third_party/gnutls/src/cli.c",
   "//third_party/gnutls/src/benchmark-cipher.c",
   "//third_party/gnutls/src/benchmark.c",
   "//third_party/gnutls/src/benchmark-tls.c",
-  "//third_party/gnutls/src/ocsptool-common.c",
-  "//third_party/gnutls/src/srptool.c",
-  "//third_party/gnutls/src/ocsptool.c",
-  "//third_party/gnutls/src/danetool.c",
-  "//third_party/gnutls/src/tpmtool.c",
-  "//third_party/gnutls/src/p11tool-p11tool.c",
-  "//third_party/gnutls/src/p11tool-pkcs11.c",
-  "//third_party/gnutls/src/p11tool-certtool-common.c",
-  "//third_party/gnutls/src/p11tool-certtool-extras.c",
-  "//third_party/gnutls/src/p11tool-common.c",
+  "//third_party/gnutls/src/ocsptool-common.c",]
+  
+src_srptool = [
+  "//third_party/gnutls/src/srptool.c",]
+  
+src_ocsptool = [
+  "//third_party/gnutls/src/ocsptool.c",]
+  
+src_danetool = [
+  "//third_party/gnutls/src/danetool.c",]
+  
+src_tpmtool = [
+  "//third_party/gnutls/src/tpmtool.c",]
+  
+#src_p11tool = [
+#  "//third_party/gnutls/src/p11tool-p11tool.c",
+#  "//third_party/gnutls/src/p11tool-pkcs11.c",
+#  "//third_party/gnutls/src/p11tool-certtool-common.c",
+#  "//third_party/gnutls/src/p11tool-certtool-extras.c",
+#  "//third_party/gnutls/src/p11tool-common.c",]
+  
+src_systemkey = [
   "//third_party/gnutls/src/systemkey.c",
 ]
 
-lite_library("src") {
+lite_library("libcmd-srp") {
   target_type = "shared_library"
-  sources = src_sources
+  sources = src_libcmd_srp
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-ocsp") {
+  target_type = "shared_library"
+  sources = src_libcmd_ocsp
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-serv") {
+  target_type = "shared_library"
+  sources = src_libcmd_serv
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-cli") {
+  target_type = "shared_library"
+  sources = src_libcmd_cli
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-cli-debug") {
+  target_type = "shared_library"
+  sources = src_libcmd_cli_debug
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-certtool") {
+  target_type = "shared_library"
+  sources = src_libcmd_certtool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-danetool") {
+  target_type = "shared_library"
+  sources = src_libcmd_danetool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-p11tool") {
+  target_type = "shared_library"
+  sources = src_libcmd_p11tool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-tpmtool") {
+  target_type = "shared_library"
+  sources = src_libcmd_tpmtool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("libcmd-systemkey") {
+  target_type = "shared_library"
+  sources = src_libcmd_systemkey
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("psktool") {
+  target_type = "shared_library"
+  sources = src_psktool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("gnutls-cli-debug") {
+  target_type = "shared_library"
+  sources = src_gnutls_cli_debug
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("certtool") {
+  target_type = "shared_library"
+  sources = src_certtool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("gnutls-serv") {
+  target_type = "shared_library"
+  sources = src_gnutls_serv
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("gnutls-cli") {
+  target_type = "shared_library"
+  sources = src_gnutls_cli
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("srptool") {
+  target_type = "shared_library"
+  sources = src_srptool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("ocsptool") {
+  target_type = "shared_library"
+  sources = src_ocsptool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("danetool") {
+  target_type = "shared_library"
+  sources = src_danetool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("tpmtool") {
+  target_type = "shared_library"
+  sources = src_tpmtool
+
+  public_configs = [
+    ":src_config",
+  ]
+}
+
+lite_library("systemkey") {
+  target_type = "shared_library"
+  sources = src_systemkey
 
   public_configs = [
     ":src_config",
