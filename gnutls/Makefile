@@ -35,7 +35,7 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
 # aminclude_static.am generated automatically by Autoconf
-# from AX_AM_MACROS_STATIC on Thu Feb 11 13:02:50 IST 2021
+# from AX_AM_MACROS_STATIC on Thu Feb 11 18:31:41 IST 2021
 
 am__is_gnu_make = { \
   if test -z '$(MAKELEVEL)'; then \
@@ -113,10 +113,10 @@ host_triplet = x86_64-pc-linux-gnu
 am__append_1 = libdane
 am__append_2 = src/gl src
 #am__append_3 = src/gl
-am__append_4 = tests fuzz
+#am__append_4 = tests fuzz
 am__append_5 = guile
-am__append_6 = doc/manpages
-am__append_7 = doc
+#am__append_6 = doc/manpages
+#am__append_7 = doc
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/lib/unistring/m4/gnulib-comp.m4 \
@@ -402,7 +402,7 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /root/third_party/gnutls/new/gnutls/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /root/third_party/gnutls/gnutls_disable/gnutls/build-aux/missing aclocal-1.15
 ALLOCA = 
 ALLOCA_H = alloca.h
 AMTAR = $${TAR-tar}
@@ -410,10 +410,10 @@ AM_DEFAULT_VERBOSITY = 0
 APPLE_UNIVERSAL_BUILD = 0
 AR = ar
 ARFLAGS = cr
-AUTOCONF = ${SHELL} /root/third_party/gnutls/new/gnutls/build-aux/missing autoconf
-AUTOGEN = ${SHELL} /root/third_party/gnutls/new/gnutls/build-aux/missing autogen
-AUTOHEADER = ${SHELL} /root/third_party/gnutls/new/gnutls/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /root/third_party/gnutls/new/gnutls/build-aux/missing automake-1.15
+AUTOCONF = ${SHELL} /root/third_party/gnutls/gnutls_disable/gnutls/build-aux/missing autoconf
+AUTOGEN = ${SHELL} /root/third_party/gnutls/gnutls_disable/gnutls/build-aux/missing autogen
+AUTOHEADER = ${SHELL} /root/third_party/gnutls/gnutls_disable/gnutls/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /root/third_party/gnutls/gnutls_disable/gnutls/build-aux/missing automake-1.15
 AWK = gawk
 BITSIZEOF_PTRDIFF_T = 
 BITSIZEOF_SIG_ATOMIC_T = 
@@ -421,8 +421,8 @@ BITSIZEOF_SIZE_T =
 BITSIZEOF_WCHAR_T = 
 BITSIZEOF_WINT_T = 
 BYTESWAP_H = 
-CC = clang
-CCAS = clang
+CC = gcc
+CCAS = gcc
 CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2
 CCDEPMODE = depmode=gcc3
@@ -436,11 +436,11 @@ CODE_COVERAGE_CXXFLAGS =
 CODE_COVERAGE_ENABLED = no
 CODE_COVERAGE_LIBS = 
 CONFIG_INCLUDE = config.h
-CPP = clang -E
+CPP = gcc -E
 CPPFLAGS = 
 CRYWRAP_PATCHLEVEL = 3
-CXX = clang++
-CXXCPP = clang++ -E
+CXX = g++
+CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
 CXXFLAGS = -g -O2
 CXX_LT_AGE = 1
@@ -1293,7 +1293,7 @@ LT_XSSL_CURRENT = 0
 LT_XSSL_REVISION = 0
 MAINT = 
 MAJOR_VERSION = 3
-MAKEINFO = ${SHELL} /root/third_party/gnutls/new/gnutls/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /root/third_party/gnutls/gnutls_disable/gnutls/build-aux/missing makeinfo
 MANIFEST_TOOL = :
 MINOR_VERSION = 7
 MKDIR_P = /bin/mkdir -p
@@ -1669,13 +1669,13 @@ XGETTEXT_EXTRA_OPTIONS =  --flag=asprintf:2:c-format --flag=vasprintf:2:c-format
 YACC = bison -y
 YFLAGS = 
 YIELD_LIB = 
-abs_builddir = /root/third_party/gnutls/new/gnutls
-abs_srcdir = /root/third_party/gnutls/new/gnutls
-abs_top_builddir = /root/third_party/gnutls/new/gnutls
-abs_top_srcdir = /root/third_party/gnutls/new/gnutls
+abs_builddir = /root/third_party/gnutls/gnutls_disable/gnutls
+abs_srcdir = /root/third_party/gnutls/gnutls_disable/gnutls
+abs_top_builddir = /root/third_party/gnutls/gnutls_disable/gnutls
+abs_top_srcdir = /root/third_party/gnutls/gnutls_disable/gnutls
 ac_ct_AR = ar
-ac_ct_CC = clang
-ac_ct_CXX = clang++
+ac_ct_CC = gcc
+ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
 ac_cv_sizeof_time_t = 8
 am__include = include
@@ -1720,7 +1720,7 @@ ifGNUmake =
 ifnGNUmake = 
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/third_party/gnutls/new/gnutls/build-aux/install-sh
+install_sh = ${SHELL} /root/third_party/gnutls/gnutls_disable/gnutls/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
