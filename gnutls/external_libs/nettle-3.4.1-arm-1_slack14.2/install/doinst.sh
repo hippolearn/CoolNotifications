@@ -1,8 +1,0 @@
-( cd usr/lib ; rm -rf libhogweed.so )
-( cd usr/lib ; ln -sf libhogweed.so.4.5 libhogweed.so )
-( cd usr/lib ; rm -rf libnettle.so )
-( cd usr/lib ; ln -sf libnettle.so.6.5 libnettle.so )
-( cd usr/lib ; rm -rf libnettle.so.6 )
-( cd usr/lib ; ln -sf libnettle.so.6.5 libnettle.so.6 )
-( cd usr/lib ; rm -rf libhogweed.so.4 )
-( cd usr/lib ; ln -sf libhogweed.so.4.5 libhogweed.so.4 )
