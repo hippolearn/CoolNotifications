@@ -1,0 +1,1000 @@
+# Generate automatically. Do not edit.
+
+commit bd97afbfe28d5fbbde95ce36ff7a8834fc0291ee
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-12-11
+
+    Release 0.23.22
+
+ NEWS         | 10 ++++++++++
+ configure.ac |  2 +-
+ meson.build  |  2 +-
+ 3 files changed, 12 insertions(+), 2 deletions(-)
+
+commit bd670b1d4984b27d6a397b9ddafaf89ab26e4e7f
+Author: David Cook <divergentdave@gmail.com>
+Date:   2020-11-14
+
+    Follow-up to arithmetic overflow fix
+    
+    Check if nmemb is zero in p11_rpc_message_alloc_extra_array to avoid a
+    division by zero trap. Additionally, change the reallocarray
+    compatibility shim so that it won't assert when resizing an array to
+    zero, and add the same nmemb != 0 check there.
+
+ common/compat.c       | 4 ++--
+ p11-kit/rpc-message.c | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 5307a1d21a50cacd06f471a873a018d23ba4b963
+Author: David Cook <divergentdave@gmail.com>
+Date:   2020-11-07
+
+    Check for arithmetic overflows before allocating
+
+ p11-kit/iter.c        |  4 ++--
+ p11-kit/lists.c       |  2 ++
+ p11-kit/proxy.c       |  2 +-
+ p11-kit/rpc-message.c | 13 +++++++++++++
+ p11-kit/rpc-message.h |  4 ++++
+ p11-kit/rpc-server.c  |  8 ++++----
+ trust/index.c         |  4 ++--
+ 7 files changed, 28 insertions(+), 9 deletions(-)
+
+commit 2617f3ef888e103324a28811886b99ed0a56346d
+Author: David Cook <divergentdave@gmail.com>
+Date:   2020-11-07
+
+    Check attribute length against buffer size
+    
+    If an attribute's length does not match the length of the byte array
+    inside it, one length was used for allocation, and the other was used
+    for memcpy. This additional check will instead return an error on
+    malformed messages.
+
+ p11-kit/rpc-message.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+commit bda2f543ff8e0195c90e849379ef1585d00677bc
+Author: David Cook <divergentdave@gmail.com>
+Date:   2020-11-06
+
+    Fix bounds check in p11_rpc_buffer_get_byte_array
+    
+    This bounds check should be using off, not *offset, because it has been
+    advanced four bytes from reading a uint32 earlier in the function.
+    Additionally, the pointer that is returned is computed using off, not
+    *offset.
+
+ p11-kit/rpc-message.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e53bd90895c70d3d510cdc53a83611614be29202
+Author: David Cook <divergentdave@gmail.com>
+Date:   2020-11-06
+
+    Fix buffer overflow in log_token_info
+    
+    The utcTime field in CK_TOKEN_INFO is not null terminated, so a length
+    must be provided when copying it. This call to p11_buffer_add with a
+    length of -1 was reading past the end of the string, and off the end of
+    the stack.
+
+ p11-kit/log.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e38ff9ef0004c1d3b2a82886924c55e565d988bb
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-28
+
+    common: Don't assume __STDC_VERSION__ is always defined
+    
+    Old compilers may not define __STDC_VERSION__:
+    https://sourceforge.net/p/predef/wiki/Standards/
+    
+    Reported by dirkf in:
+    https://github.com/p11-glue/p11-kit/issues/337
+
+ common/compat.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 566247515bcb47d36fa8befacbb4a6a61fea9d24
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-12-03
+
+    compat: getauxval: correct compiler macro for FreeBSD
+    
+    It should be __FreeBSD__ instead of __FREEBSD__:
+    https://sourceforge.net/p/predef/wiki/OperatingSystems/
+
+ common/compat.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e0c09919bae321306f38517f4dcfb195e1667559
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-12-03
+
+    compat: fdwalk: add guard for Linux specific local variables
+
+ common/compat.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+commit 2b36520fa4b27816b4f123d16e93d3b3520bf692
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-12-03
+
+    meson: Add missing libtasn1 dependency
+
+ trust/meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3a355e9736a7853d593fe1f483cbb23198f4cfd1
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-12-02
+
+    travis: Add freebsd build
+
+ .travis.yml                       | 1 +
+ .travis/freebsd/after_failure.sh  | 3 +++
+ .travis/freebsd/before_install.sh | 5 +++++
+ .travis/freebsd/script.sh         | 6 ++++++
+ 4 files changed, 15 insertions(+)
+
+commit cdc313a0bb9673d7c4413e24b338b3dd9923d0e9
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-06
+
+    anchor: Prefer persistent format when storing anchor
+    
+    When a new certificate is stored with "trust anchor --store" from a
+    .p11-kit file, the command treated it as a PEM file, while it should
+    preserve extra fields in the file.
+
+ trust/anchor.c        |  7 ++++---
+ trust/test-extract.sh | 27 ++++++++++++++++++++++++---
+ 2 files changed, 28 insertions(+), 6 deletions(-)
+
+commit 8f7352a6ba77f8bde8bbd9ec3aee30fd0f1a3be3
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-29
+
+    travis: Run "make check" along with "make distcheck" for coverage
+
+ .travis/autotools/script.sh | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 495652718b3d5793fae7cbc2c031d401abfd6af2
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-29
+
+    travis: Use python3 as the default Python interpreter
+
+ .travis/autotools/after_success.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ae1bda39910169395c720290964f10f8b34f2554
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-29
+
+    travis: Route to Ubuntu 20.04 base image
+    
+    Fedora 33 image doesn't work well under the the default image based on
+    Ubuntu 16.04.
+
+ .travis.yml | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+commit f1cf43acea56c0db3191fdd8f467f2d5c5545782
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-07
+
+    meson: Set -fstack-protector for MinGW64 cross build
+    
+    This fixes CI failures caused by:
+    https://sourceforge.net/p/mingw-w64/bugs/818/
+
+ build/cross_file_mingw64.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit b9cb93d4ab959afab62bb4e482bfe12c0421623f
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-27
+
+    meson: expand ternary operator in function call for compatibility
+    
+    While the minimum version requirement of meson is 0.49, the current
+    meson.build causes the parser crash, because of the use of a ternary
+    operator inside a function call:
+    https://github.com/mesonbuild/meson/issues/5003
+
+ meson.build | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit c4e75e10021ce86ab42682ea4936dce94ced2f77
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-11-20
+
+    meson: Use custom_target for generating external XML entities
+    
+    configure_file() adds a trailing newline, and thus the resulting
+    document contains unwanted spaces between the resolved entities and
+    the following text.  Instead, use custom_target() along with 'echo -n'
+    to generate the XML entity files.
+
+ doc/manual/meson.build | 35 ++++++++++++++++++++++-------------
+ 1 file changed, 22 insertions(+), 13 deletions(-)
+
+commit 5f30d867f35390e4f4e71b3b54ced2362c0038f8
+Author: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
+Date:   2020-11-16
+
+    meson: Allow building manpages without gtk-doc
+    
+    Fixes https://github.com/p11-glue/p11-kit/issues/331
+
+ doc/manual/meson.build | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+commit bb9e3bdd753fdc93042657829da2a6eb5ba8db9c
+Author: Alexander Sosedkin <asosedkin@redhat.com>
+Date:   2020-10-27
+
+    Rename is_path_component to is_path_separator
+    
+    Thanks to Daiki Ueno for noticing the misnaming.
+
+ common/path.c | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+
+commit 8768892d86c403f65e4e2163f8c77246d5e675b4
+Author: Alexander Sosedkin <asosedkin@redhat.com>
+Date:   2020-10-27
+
+    Use is_path_component in one more place
+
+ common/path.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 8b2081d63739ed311d3c9ba4763f8e9d8da60711
+Author: Alexander Sosedkin <asosedkin@redhat.com>
+Date:   2020-10-27
+
+    Remove more duplicate separators in p11_path_build
+    
+    Makes p11_path_build remove duplicate separators more thoroughly,
+    e.g., after a "" or in the first argument.
+
+ common/path.c      | 26 +++++++++++++++++++-------
+ common/test-path.c | 22 ++++++++++++++++++++++
+ 2 files changed, 41 insertions(+), 7 deletions(-)
+
+commit 4901dc73f7cf8756e9f1bd22c29dda5397875691
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-10-22
+
+    common: Fix infloop in p11_path_build
+    
+    If p11_path_build is called with 2 or more arguments and the non-first
+    argument is an empty string (""), it previously fell into an infloop.
+    
+    Reported by Karel Srot.
+
+ common/path.c      | 4 +++-
+ common/test-path.c | 4 ++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+commit 0a1263a41d4c482f50aa5c4643f9de38fda44bbd
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-10-05
+
+    proxy: C_CloseAllSessions: Make sure that calloc args are non-zero
+    
+    This prevents efence warning if either of the calloc arguments is
+    zero.  While it is is safe on glibc systems, POSIX says the behavior
+    is implementation-defined.
+    
+    Reported by Paul Wouters.
+
+ p11-kit/proxy.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 08fcec713c1d3038f706d049910bd13a8c811fb5
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-10-05
+
+    build: Use calloc in a consistent manner
+
+ common/dict.c   | 6 +++---
+ p11-kit/proxy.c | 4 ++--
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+commit 565ba5d6de58d4b210435b786ae0d753e044901c
+Author: John Hein <dkeabg7vp4@snkmail.com>
+Date:   2020-09-23
+
+    meson: Allow override of default bashcompdir.
+    Fixes meson regression (issue #322).  Pass -Dbashcompdir=/xxx to meson.
+
+ bash-completion/meson.build | 16 ++++++++++------
+ meson_options.txt           |  4 ++++
+ 2 files changed, 14 insertions(+), 6 deletions(-)
+
+commit 56251aa50783cdd465877d28c8f017ae16c61f79
+Author: Tavian Barnes <tavianator@tavianator.com>
+Date:   2020-09-06
+
+    common: Check for a NULL locale before freeing it
+    
+    If newlocale() fails, (locale_t) 0 ends up being passed to freelocale(),
+    resulting in a segfault when the library is unloaded.
+
+ common/library.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 2c40a4a55efa8c1bce0f7aadd5135be705565610
+Author: Anders Kaseorg <andersk@mit.edu>
+Date:   2020-08-30
+
+    p11_test_copy_setgid: Skip setgid tests on nosuid filesystems
+    
+    Some build environments build packages from a build directory mounted
+    nosuid, causing p11_test_copy_setgid to fail.  Skip the test in this
+    case.
+    
+    Signed-off-by: Anders Kaseorg <andersk@mit.edu>
+
+ common/test.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+commit 8b5a10e7ed74b6839e5e415d47b263d26c63e572
+Author: Rosen Penev <rosenp@gmail.com>
+Date:   2020-08-27
+
+    unix-peer: replace incorrect include1
+    
+    Fixes musl warning:
+    
+    warning: #warning redirecting incorrect #include <sys/errno.h> to <errno.h> [-Wcpp]
+
+ common/unix-peer.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a26d0b052c32fbd9c7ef468bd4188fa8fa03499a
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-21
+
+    test-compat: Skip getprogname test if BUILDDIR contains a symlink
+
+ common/test-compat.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit 7f59a79179b978e867c9def56475bfb877024312
+Author: Xℹ Ruoyao <xry111@mengyan1223.wang>
+Date:   2020-08-19
+
+    add trust-extract-compat into EXTRA-DIST
+
+ trust/Makefile.am | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 1a21df391691d9a9c7b5ebc77022385f7feb266b
+Author: Xℹ Ruoyao <xry111@mengyan1223.wang>
+Date:   2020-08-19
+
+    meson: install trust-extract-compat
+
+ trust/meson.build | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 49e9b47c9546525e29b25c707068770e12add45f
+Author: Xℹ Ruoyao <xry111@mengyan1223.wang>
+Date:   2020-08-19
+
+    rename trust-extract-compat.in to trust-extract-compat
+    
+    There is no substitution in this file, so it's unnecessary to have a .in
+    file.
+
+ configure.ac                                            | 1 -
+ trust/{trust-extract-compat.in => trust-extract-compat} | 0
+ 2 files changed, 1 deletion(-)
+
+commit fd8b56f3ee971f94dc6fc95411fc01e1c12153ab
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-18
+
+    autotools: Fix SUFFIXES usage
+    
+    SUFFIXES must be defined in the top-level Makefile.am, when
+    non-recursive make is used.
+
+ Makefile.am         | 2 ++
+ p11-kit/Makefile.am | 2 +-
+ trust/Makefile.am   | 2 +-
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+commit 3c1304caae967b7cca40aae70c47c7f5138ea945
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-18
+
+    Release 0.23.21
+
+ NEWS         | 6 ++++++
+ configure.ac | 2 +-
+ meson.build  | 2 +-
+ 3 files changed, 8 insertions(+), 2 deletions(-)
+
+commit 43961d4e9bdceee241ce25877aad327d4daa5a10
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-18
+
+    packit: Adjust to doing propose-update through /packit comment
+
+ .packit.yaml | 30 +++++++++++++++---------------
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+commit b40f27af28406810d0f42a29b98086fb02173f0c
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-18
+
+    README.md: Fix whitespace problem
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 76f94b4ad111c4150a16d36aafd30ab8aa274a68
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-18
+
+    conf: Add internal option to forcibly enable user config
+    
+    Some tests need user config enabled, though it is disabled under
+    certain conditions (e.g., running as root) and makes those tests fail.
+
+ p11-kit/conf.c            | 5 ++++-
+ p11-kit/test-conf.c       | 7 +++++++
+ p11-kit/test-deprecated.c | 4 ++++
+ p11-kit/test-modules.c    | 4 ++++
+ p11-kit/test-transport.c  | 4 ++++
+ 5 files changed, 23 insertions(+), 1 deletion(-)
+
+commit 46c2ff05bf92e73735575aeb8bb9b9bec545f33c
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-18
+
+    SECURITY.md: Split from README.md
+
+ README.md   | 17 +----------------
+ SECURITY.md |  5 +++++
+ 2 files changed, 6 insertions(+), 16 deletions(-)
+
+commit da01718924623c1502eb45b7c946d6df798ea1be
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-18
+
+    README.md: Add LGTM badges
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit adbb94ea3ec3c39b71c05eff8ef86cc85a075955
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-15
+
+    trust: Remove generated *.asn.h files from repository
+
+ .gitignore          |   1 +
+ configure.ac        |   1 +
+ trust/Makefile.am   |  25 ++--
+ trust/basic.asn.h   |  13 --
+ trust/meson.build   |  43 +++---
+ trust/openssl.asn.h |  26 ----
+ trust/pkix.asn.h    | 366 ----------------------------------------------------
+ 7 files changed, 45 insertions(+), 430 deletions(-)
+
+commit 015fe112def654cac562b85ca864dc279ca4e897
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-15
+
+    uri: Limit characters in vendor query attribute names
+
+ p11-kit/uri.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+commit 6f58217fd0590a52137b0d350d07cb4408a1bd77
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-15
+
+    compat: Define static assertion macro
+
+ common/compat.h       | 7 +++++++
+ p11-kit/rpc-message.c | 8 ++------
+ 2 files changed, 9 insertions(+), 6 deletions(-)
+
+commit 4e597e1858a3842798e8400eb2ac886612c1c6bf
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-14
+
+    rpc-transport: Remove pointless FIXME comments
+    
+    Those actually shouldn't be closed.
+
+ p11-kit/rpc-transport.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit d3dc234ce2ff08d0d7f29b4c464fb5a3406c341d
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-14
+
+    trust: p11_index_snapshot: Remove redundant integer range check
+
+ trust/index.c | 3 ---
+ 1 file changed, 3 deletions(-)
+
+commit 4e9ca11deaab88f1297c812af55dfb0036d1e207
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-14
+
+    build: Add header guards
+    
+    Signed-off-by: Daiki Ueno <ueno@gnu.org>
+
+ common/init.h | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit a88e7c1cc9b23f1310f3dd1a6922e270aed524eb
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-14
+
+    common/frob-getprogname: Avoid shadowing function parameter
+    
+    Signed-off-by: Daiki Ueno <ueno@gnu.org>
+
+ common/frob-getprogname.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit d70d572610cd3ec7e246e898e93300615a02b267
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-14
+
+    server: Avoid shadowing global variable
+
+ p11-kit/server.c | 15 ++++++---------
+ 1 file changed, 6 insertions(+), 9 deletions(-)
+
+commit 82374159ca3a5c0c252b2862a32dd96baeee1812
+Author: David Halls <dahalls@gmail.com>
+Date:   2019-12-14
+
+    If server returns already initialized, don't mark as not initialized
+
+ p11-kit/rpc-client.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 15f15549bf41dfe665583d4c1fe316a524939075
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-02
+
+    common: Get program name based on executable path if possible
+    
+    Some programs (e.g., Chromium) pack command line arguments into argv[0].
+    Check if it is the case by reading /proc/self/exe and extract the
+    program name.
+    
+    Logic borrowed from:
+    <https://github.com/mesa3d/mesa/commit/759b94038987bb983398cd4b1d2cb1c8f79817a9>.
+
+ .gitignore                |   1 +
+ common/Makefile.am        |   7 +++
+ common/compat.c           |  29 +++++++++++
+ common/frob-getprogname.c | 120 ++++++++++++++++++++++++++++++++++++++++++++++
+ common/meson.build        |   5 ++
+ common/test-compat.c      |  15 ++++++
+ 6 files changed, 177 insertions(+)
+
+commit d10c5a35695df82f81f22c1e7d026be07c21aec5
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-02
+
+    trust: Avoid uninitialized variable in session_for_store_on_module
+    
+    This suppresses the cppcheck error:
+      trust/anchor.c:243,error,uninitvar,Uninitialized variable: count
+    
+    Also fixes calloc invocation when the slot count is 0.
+
+ trust/anchor.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit e4f65d88076bf915dd969efd03b7d994196b7fa9
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-02
+
+    test: Avoid uninitialized variable
+    
+    This suppresses the cppcheck error:
+      p11-kit/test-deprecated.c:481,error,uninitvar,Uninitialized variable: manufacturerID
+
+ p11-kit/test-deprecated.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 5b6c66ec1121527a5db4339ff509a8fe6fdbc262
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-02
+
+    mock: Avoid uninitialized variable in test_find_objects
+    
+    This suppresses the cppcheck errors:
+      p11-kit/test-mock.c:769,error,uninitvar,Uninitialized variable: count
+      p11-kit/test-mock.c:776,error,uninitvar,Uninitialized variable: count
+      p11-kit/test-mock.c:783,error,uninitvar,Uninitialized variable: count
+
+ p11-kit/test-mock.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6242c67ed70ee95174267259ca804fd671725d91
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-08-02
+
+    constants: Tighten handling of failure case in lookup_info
+    
+    This suppresses the cppcheck error:
+      common/constants.c:649,error,invalidFunctionArg,Invalid bsearch() argument nr 3. The value is -1 but the valid values are '0:'.
+
+ common/constants.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 5e98a5471fa9cf136e092c279c72ff53ddebf76d
+Author: Kai Takahashi <www.carrotsoft@gmail.com>
+Date:   2020-08-02
+
+    Avoid using setenv() for MinGW users.
+    
+    Signed-off-by: Kai Takahashi <www.carrotsoft@gmail.com>
+
+ common/tool.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 714b216bbbaecf188685dddd98dd184e6c2721f4
+Author: Albert Chin-A-Young <china@thewrittenword.com>
+Date:   2020-07-25
+
+    p11-kit/modules.c: Avoid passing 0 as first argument to calloc().
+      Solves an issue #303 for AIX.
+
+ p11-kit/modules.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 7f5ef7c04a24ede94a31a7e7820d9d03b9522bd5
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-06-12
+
+    anchor: Exit with non-zero code, if any error occurs
+    
+    Suggested by Nikos Mavrogiannopoulos in:
+    https://github.com/p11-glue/p11-kit/issues/300
+
+ trust/anchor.c | 35 ++++++++++++++++++++++++-----------
+ 1 file changed, 24 insertions(+), 11 deletions(-)
+
+commit 51cd2fdd844772eae874e1d6060a8cae6ad15760
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-06-12
+
+    tool: Don't override P11_KIT_DEBUG if it is already set
+
+ common/tool.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit a9e5fe3968759f4b4e7948c231917ffda18f0c7b
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-06-12
+
+    tool: Print messages by default
+
+ common/tool.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 71fdb9f5c4362c00bd9684793775f8ccc7ba6166
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-06-12
+
+    debug: Remove unused debug_inited flag
+
+ common/debug.c | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit 56be8eae5cc337659eaddb07c502e901be8db203
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-06-12
+
+    meson: Fix typo
+
+ doc/manual/meson.build | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 47e0c1fec418df1bbf2a056f1e983b64e3e23df0
+Author: Daiki Ueno <ueno@gnu.org>
+Date:   2020-05-30
+
+    trust/*.asn: Drop standard types
+
+ trust/basic.asn.h   |   2 +-
+ trust/openssl.asn   |   3 --
+ trust/openssl.asn.h |   8 ++---
+ trust/pkix.asn      |  26 --------------
+ trust/pkix.asn.h    | 102 ++++++++++++++++------------------------------------
+ 5 files changed, 34 insertions(+), 107 deletions(-)
+
+commit adf2685b23b8a631e8092aaf707cd1bcf7b230bb
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-05-17
+
+    README.md: Fix typo
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7eb041e573a5dd55cea97427ab1807772c0a7c83
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-05-17
+
+    README.md: Revamp and add build instruction
+    
+    Also mention the required options for local installation.
+    Suggested by Andrew Johnson in:
+    https://github.com/p11-glue/p11-kit/issues/295
+
+ README.md | 31 ++++++++++++++++++++++---------
+ 1 file changed, 22 insertions(+), 9 deletions(-)
+
+commit 4ea7cf7e819bbf8415a2aad2c99e7aa0f7fa143d
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-05-17
+
+    meson: Add option to control bash-completion installation
+
+ bash-completion/meson.build | 2 +-
+ meson_options.txt           | 4 ++++
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+commit e0053798510a56057b7a77bb3c59e68725888200
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-04-13
+
+    test-token: Check if the path is actually writable
+    
+    Instead of assuming a normal user cannot write to "/", this creates an
+    unwritable directly and checks if it is writable; otherwise the test
+    case is skipped.
+    
+    Reported by Jeffrey Walton in:
+    https://github.com/p11-glue/p11-kit/issues/288
+
+ trust/test-token.c | 63 ++++++++++++++++++++++++++++++++++++++++++------------
+ 1 file changed, 49 insertions(+), 14 deletions(-)
+
+commit c1c71b03e08ffb9384438e7f94b1b8f699dce2cd
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-04-13
+
+    test: Make p11_test_{skip,todo} actually work
+
+ common/test.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+commit 825fd4e4526589eb73a54ada18127196fb65fde3
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-04-13
+
+    meson: Add option to disable building test programs
+    
+    Suggested by Daniel Engberg in:
+    https://github.com/p11-glue/p11-kit/issues/285
+
+ common/meson.build  |  88 +++++++++---------
+ meson_options.txt   |   4 +
+ p11-kit/meson.build | 252 +++++++++++++++++++++++++++-------------------------
+ trust/meson.build   | 148 +++++++++++++++---------------
+ 4 files changed, 256 insertions(+), 236 deletions(-)
+
+commit 3de74dc6d916ce3dd2f76f0403be189387fe4d89
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-04-13
+
+    meson: Add option to disable NLS support
+    
+    Suggested by Daniel Engberg in:
+    https://github.com/p11-glue/p11-kit/issues/284
+
+ meson.build       | 4 +++-
+ meson_options.txt | 4 ++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+commit 99aa8329841b986380cc4f515d57f118f40158c4
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-04-13
+
+    test-rpc: Suppress compiler warning on ILP32 platforms
+    
+    On ILP32 platforms CK_ULONG is 32-bit and 64-bit values are truncated.
+    This patch determins the usable value from SIZEOF_UNSIGNED_LONG.
+    Also, for consistency, use UINTxx_MAX for other accessors.
+    
+    Reported by Jeffrey Walton in:
+    https://github.com/p11-glue/p11-kit/issues/289
+
+ p11-kit/test-rpc.c | 47 ++++++++++++++++++++++++++++-------------------
+ 1 file changed, 28 insertions(+), 19 deletions(-)
+
+commit 3eb79b75c2ee9870352fe4acc1ef6c8783364800
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-02-07
+
+    rpc: Add missing null checks in attribute value serializers
+    
+    To get the length of an attribute value, the client calls
+    C_GetAttributeValue with attr->pValue set to NULL and attr->ulValueLen
+    set to -1.  In the RPC level, this is already indicated with a
+    'validity' flag, but there were a couple of places where attr->pValue
+    is non-NULL.
+    
+    This was uncovered by:
+    https://bugzilla.redhat.com/show_bug.cgi?id=1766340
+
+ p11-kit/rpc-message.c | 23 ++++++++++++++---------
+ 1 file changed, 14 insertions(+), 9 deletions(-)
+
+commit 04cbdcf546f88d666fcb214ce42e777fa7840732
+Author: Alvin Chen <sonoma001@gmail.com>
+Date:   2020-03-02
+
+    Update pkcs11 header to allow TPM2-PKCS11 to compile
+
+ common/pkcs11.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 51c0781410cb1292d7efbafee23ee5876c9bd2e4
+Author: Anderson Toshiyuki Sasaki <ansasaki@redhat.com>
+Date:   2020-02-18
+
+    test-proxy: Add test for slot ID reuse
+    
+    The test covers a case where duplicate slots IDs were assigned to two
+    different slots in the mapping.
+    
+    Signed-off-by: Anderson Toshiyuki Sasaki <ansasaki@redhat.com>
+
+ p11-kit/Makefile.am       |   7 ++-
+ p11-kit/meson.build       |   3 +-
+ p11-kit/mock-module-ep8.c | 110 ++++++++++++++++++++++++++++++++++++++++++++++
+ p11-kit/test-proxy.c      |  39 ++++++++++++++++
+ 4 files changed, 157 insertions(+), 2 deletions(-)
+
+commit c8f8053edc9098fdb36fbb34165b8d92ed596798
+Author: Anderson Toshiyuki Sasaki <ansasaki@redhat.com>
+Date:   2020-02-17
+
+    proxy: Fix slot ID reuse, avoiding duplicating IDs
+    
+    Previously, when re-mapping the slots, a slot ID could be assigned to
+    more than one device, causing errors when searching for the right
+    mapping (it would use the first found).
+    
+    Also assign new slot IDs for new found slots, avoiding previously used
+    slot IDs.  The last assigned slot ID is stored in the proxy structure
+    in a new added field last_id.
+    
+    Signed-off-by: Anderson Toshiyuki Sasaki <ansasaki@redhat.com>
+
+ p11-kit/proxy.c | 56 +++++++++++++++++++++++++++++++++++++-------------------
+ 1 file changed, 37 insertions(+), 19 deletions(-)
+
+commit da22fd9f2a54d707db7f3021f22416b4af496ae8
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-30
+
+    packit: Enable Fedora package building with Packit
+
+ .packit.yaml | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+
+commit 762cdaa2cd5c5ec09cc844f9a6bdc551c7f6c8ed
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-29
+
+    Release 0.23.20
+
+ NEWS         | 3 +++
+ configure.ac | 2 +-
+ meson.build  | 2 +-
+ 3 files changed, 5 insertions(+), 2 deletions(-)
+
+commit ab180d64b909594bdafc9596f67a1913275c6474
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-29
+
+    Revert "Fix RPC calls: ATTRIBUTE buf not null but length 0"
+    
+    This reverts commit 65409c0ebd5d9a4aaf55254256dcc878862a0be1.
+
+ p11-kit/rpc-message.c |  8 +-------
+ p11-kit/rpc-server.c  | 22 +++-------------------
+ 2 files changed, 4 insertions(+), 26 deletions(-)
+
+commit 17a26f0948944635453a54d44c2565ed7ba91a14
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-29
+
+    Revert "Fix RPC calls: BYTE buffer not null and length 0"
+    
+    This reverts commit 8cb21a6a09d18156c9002b97687e5ac0bfa0fc92.
+
+ p11-kit/rpc-client.c  | 2 +-
+ p11-kit/rpc-message.c | 6 ++----
+ p11-kit/rpc-message.h | 3 +--
+ p11-kit/rpc-server.c  | 7 ++-----
+ 4 files changed, 6 insertions(+), 12 deletions(-)
+
+commit 83aaa2200bfa141b0c9e1c4f5af98252f8e826cc
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-29
+
+    Revert "Fix C_GetSlotList() when length is 0"
+    
+    This reverts commit 1ede9b8d33c4bc9a4194ffca22ac6d7351f6bcf5.
+    
+    It turned out that this breaks compatibility of the RPC protocol.  The
+    right fix to the original issue would be probably to add a new call ID
+    associated with a different signature and add a fallback mechanism in
+    both client and server.
+
+ p11-kit/rpc-client.c  |  2 +-
+ p11-kit/rpc-message.c |  6 ++----
+ p11-kit/rpc-message.h |  3 +--
+ p11-kit/rpc-server.c  |  7 ++-----
+ p11-kit/test-server.c | 36 ------------------------------------
+ 5 files changed, 6 insertions(+), 48 deletions(-)
+
+commit 69a420aaa70af5b89508b5140edb0ee4e166605b
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-21
+
+    Release 0.23.19
+
+ NEWS         | 9 +++++++++
+ configure.ac | 2 +-
+ meson.build  | 2 +-
+ 3 files changed, 11 insertions(+), 2 deletions(-)
+
+commit 251dfdfd765e709b7d54420c685e19f70a5e9803
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-22
+
+    travis: Tighten autotools build steps
+
+ .travis/autotools/script.sh | 29 ++++++++++++++++++++++++++++-
+ 1 file changed, 28 insertions(+), 1 deletion(-)
+
+commit e9dbeeea96b0b709631d1b6d62f9877f4872993b
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-22
+
+    travis: Do 'make distcheck' in autotools build
+
+ .travis/autotools/script.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 2a1ee21ca31a62274e0932572f972bf3340f8bde
+Author: Daiki Ueno <dueno@redhat.com>
+Date:   2020-01-21
+
+    build: Add --with-bash-completion configure option
+    
+    This is needed for 'make distcheck' to not install those files in the
+    system locations.
+
+ Makefile.am  |  1 +
+ configure.ac | 12 +++++++++---
+ 2 files changed, 10 insertions(+), 3 deletions(-)
+[--snip--]
